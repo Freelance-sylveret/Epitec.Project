@@ -1,108 +1,350 @@
 <!DOCTYPE html>
-
-<html>
-    <head> 
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <title>Epitec Sarl</title>
-    </head>
-
-    <body>
-        <header>
-            <div class="wrapper">
-                <img src="images/logo.jpeg" alt="Epitec Sarl" class="logo">
-                <nav>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epitec Sarl - L'immobilier par excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.jpeg" alt="Epitec Sarl">
+                </div>
+                <nav class="main-nav">
                     <ul>
-                        <li><a href="#main_image">ACCUEIL</a></li>
-                        <li><a href="#steps">QUI SOMMES-NOUS</a></li>
-                        <li><a href="#possibilities">CONSEILS EXPERTISE</a></li>
-                        <li><a href="#contacts">CONTACT</a></li>
+                        <li><a href="#acheter">ACHETER</a></li>
+                        <li><a href="#louer">LOUER</a></li>
+                        <li><a href="#vendre">VENDRE</a></li>
+                        <li><a href="#gestion">GESTION LOCATIVE</a></li>
+                        <li><a href="#syndic">SYNDIC</a></li>
+                        <li><a href="#actualites">ACTUALITÉS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
-
                 </nav>
-               
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
-
-        </header>
-
-        <section id="main_image">
-            <div class="wrapper">
-                <h2>Organisez votre<br><strong>voyage sur mesure</strong></h2>
-                <a href="page1.html" class="button1">Par ici </a>
-            </div>
-        </section>
-
-        <section id="steps">
-            <div class="wrapper">
-                <ul>
-                    <li id="steps-1">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h4>Planifier</h4>
-                        <p>Confiez-nous vos rives d'évasion : en famille ou entre amis, nous trouverons la formule qui comblera vos attentes.</p>
-                    </li>
-                    <li id="steps-2">
-                        <i class="fas fa-calendar-check"></i>
-                        <h4>Organiser</h4>
-                        <p>Bénéficiez de l'expertise de nos spécialistes de chaque destination, ils vous accompagnent dans la réalisation de votre voyage.</p>
-                    </li>
-                    <li id="steps-3">
-                        <i class="fas fa-home"></i>
-                        <h4>Voyager</h4>
-                        <p>Nous nous chargeons d'assurer votre sécurité et de veiller à votre pleine sérénité tout au long de votre voyage.</p>
-                    </li>
-                    <div class="clear"></div>
-                </ul>
-            </div>
-        </section>
-        
-
-        <section id="possibilities">
-            <div class="wrapper">
-                <article style="background-image: url('images/image9.jpeg');">
-                    <div class="overlay">
-                        <h4>Partez en famille</h4>
-                        <p><small>Offrez le meilleur a ceux que vous aimez et partagez des moments fabuleux !</small></p>
-                        <a href="terrain.html" class="button2"> Plus d'infos</a>
-                    </div>
-                </article>
-
-                <article style="background-image: url('images/img6.jpg');">
-                    <div class="overlay">
-                        <h4>Envie de s'évader</h4>
-                        <p><small>Parfois un peu d'évasion serait le bienvenue et ferait le plus grand bien !</small></p>
-                        <a href="maison.html" class="button2"> Plus d'infos</a>
-                    </div>
-                    
-                    <div class="clear"></div> 
-                </article>
-            </div>
-        </section>
-        <section id="contacts">
-            <div class="wrapper">
-                <h3>Contactez-nous</h3>
-                <p>Chez Travel Agency nous savons que voyager est une aventure humaine mais également un engagement financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur mesure.</p>
-
-                <form action="traitement.php" method="POST">
-                    <label for="name">Nom</label>
-                    <input type="text" name="name" id="name" placeholder="votre nom" required>
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="votre email" required>
-                    <input type="submit" value="OK" class="button3">
-                </form>
-            </div>
-        </section>
-        <footer>
-            <div class="copyright">
-                <ul>
-                    <li>Info line :(+225) 07 04 69 82 01  (+225) 25 20 00 24 97</li>
-                    <li>Email : </li>
-                </ul>
-            
-            <h1>Epitec Sarl <span class="orange">.</span></h1>
-            Copyright © 2025. Tous droits réservés.
         </div>
-        </footer>
-    </body>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>VOTRE BIEN D'EXCEPTION</h1>
+                <p>Epitec Sarl, votre partenaire immobilier de confiance depuis plus de 20 ans</p>
+                <div class="hero-buttons">
+                    <a href="#biens" class="btn-primary">Découvrir nos biens</a>
+                    <a href="#contact" class="btn-secondary">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>NOS SERVICES HAUT DE GAMME</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Je cherche à acheter</h3>
+                    <p>Trouvez la propriété de vos rêves parmi notre sélection exclusive de biens immobiliers.</p>
+                    <a href="#contact" class="service-link">Contactez-nous <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Je cherche à louer</h3>
+                    <p>Explorez notre portfolio de locations résidentielles et commerciales de prestige.</p>
+                    <a href="#contact" class="service-link">Contactez-nous <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h3>Je cherche à vendre</h3>
+                    <p>Bénéficiez de notre expertise pour vendre votre bien au meilleur prix.</p>
+                    <a href="#contact" class="service-link">Contactez-nous <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Gestion locative</h3>
+                    <p>Confiez-nous la gestion complète de votre investissement immobilier.</p>
+                    <a href="#contact" class="service-link">Contactez-nous <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Syndic de co-propriété</h3>
+                    <p>Une gestion professionnelle de votre immeuble en co-propriété.</p>
+                    <a href="#contact" class="service-link">Contactez-nous <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Conseil expertise</h3>
+                    <p>Estimations, conseils et accompagnement pour tous vos projets immobiliers.</p>
+                    <a href="#contact" class="service-link">Contactez-nous <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="biens">
+        <div class="container">
+            <h2>BIENS D'EXCEPTION</h2>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img7.jpeg" alt="Villa de luxe">
+                        <div class="property-badge">À VENDRE</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>VILLA DE LUXE</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cocody, Abidjan</p>
+                        <p class="property-description">Villa exceptionnelle avec piscine et jardin, 4 chambres, 350m²</p>
+                        <div class="property-price">85 000 000 FCFA</div>
+                        <a href="#" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/image9.jpeg" alt="Appartement standing">
+                        <div class="property-badge">À LOUER</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>APPARTEMENT DE STANDING</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Zone 4, Abidjan</p>
+                        <p class="property-description">Appartement lumineux, 3 chambres, 180m², vue dégagée</p>
+                        <div class="property-price">350 000 FCFA/mois</div>
+                        <a href="#" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img6.jpg" alt="Bureau commercial">
+                        <div class="property-badge">À LOUER</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>BUREAUX COMMERCIAUX</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Plateau, Abidjan</p>
+                        <p class="property-description">Espaces de bureaux modernes, 200m², parking inclus</p>
+                        <div class="property-price">800 000 FCFA/mois</div>
+                        <a href="#" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn-primary">Voir tous nos biens</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>EPITEC SARL, VOTRE PARTENAIRE IMMOBILIER DE CONFIANCE</h2>
+                    <p>Depuis plus de 20 ans, Epitec Sarl est l'un des leaders de l'immobilier de prestige en Côte d'Ivoire. Notre expertise reconnue et notre connaissance approfondie du marché local nous permettent de vous offrir un service d'excellence.</p>
+                    <p>Nous accompagnons une clientèle internationale et locale dans leurs projets immobiliers les plus ambitieux, avec un seul objectif : dépasser vos attentes.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Biens vendus</p>
+                        </div>
+                        <div class="stat">
+                            <h3>20+</h3>
+                            <p>Années d'expérience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Clients satisfaits</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/img7.jpeg" alt="Epitec Sarl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>CONTACTEZ-NOUS</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>(+225) 07 04 69 82 01</p>
+                            <p>(+225) 25 20 00 24 97</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@epitec.ci</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>Abidjan, Cocody<br>
+                            Côte d'Ivoire</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="traitement.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telephone" placeholder="Votre téléphone">
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="">Choisir un service</option>
+                                <option value="achat">Achat</option>
+                                <option value="location">Location</option>
+                                <option value="vente">Vente</option>
+                                <option value="gestion">Gestion locative</option>
+                                <option value="syndic">Syndic</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="actualites">
+        <div class="container">
+            <h2>ACTUALITÉS IMMOBILIÈRES</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/img7.jpeg" alt="Actualité 1">
+                        <div class="news-date">15 Février 2025</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Le marché immobilier abidjanais en pleine expansion</h3>
+                        <p>Découvrez les dernières tendances du marché immobilier à Abidjan avec une croissance de 12% ce semestre...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/image9.jpeg" alt="Actualité 2">
+                        <div class="news-date">10 Février 2025</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Nouveau programme de villas de luxe à Cocody</h3>
+                        <p>Epitec Sarl lance un programme exclusif de 15 villas haut de gamme avec piscine et jardin...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/img6.jpg" alt="Actualité 3">
+                        <div class="news-date">5 Février 2025</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Conseils pour investir dans l'immobilier en 2025</h3>
+                        <p>Les experts d'Epitec vous guident dans vos choix d'investissement immobilier cette année...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn-primary">Voir toutes les actualités</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpeg" alt="Epitec Sarl">
+                        <h3>Epitec Sarl</h3>
+                    </div>
+                    <p>L'immobilier par excellence</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#acheter">Achat</a></li>
+                        <li><a href="#louer">Location</a></li>
+                        <li><a href="#vendre">Vente</a></li>
+                        <li><a href="#gestion">Gestion locative</a></li>
+                        <li><a href="#syndic">Syndic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#biens">Nos biens</a></li>
+                        <li><a href="#actualites">Actualités</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Pour tout savoir sur l'évolution de l'immobilier et recevoir nos conseils</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email">
+                        <button type="submit">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Epitec Sarl. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
