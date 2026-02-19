@@ -149,6 +149,26 @@ header {
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
+    z-index: 1001;
+}
+
+.main-nav.active {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.main-nav.active a {
+    padding: 0.5rem 0;
+    border-bottom: none;
+    margin-bottom: 0.5rem;
 }
 
 /* =================================
