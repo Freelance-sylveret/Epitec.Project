@@ -3,15 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info-maison</title>
-    <link rel="stylesheet" href="styles2.css">
+    <title>Maisons - Epitec Sarl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Envie de s'évader</h1>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo2.jpeg" alt="Epitec Sarl">
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="acheter.html">ACHETER</a></li>
+                        <li><a href="louer.html">LOUER</a></li>
+                        <li><a href="vendre.html">VENDRE</a></li>
+                        <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                        <li><a href="syndic.html">SYNDIC</a></li>
+                        <li><a href="actualites.html">ACTUALITÉS</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
     </header>
-    <section>
-        <p>Trouvez votre maison idéale pour un cadre paisible et relaxant, loin du stress quotidien.</p>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>MAISONS D'EXCEPTION</h1>
+            <p>Trouvez votre maison idéale pour un cadre de vie paisible et relaxant</p>
+        </div>
     </section>
+
+    <!-- Properties Section -->
+    <section class="properties-section">
+        <div class="container">
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img21.jpg" alt="Maison Moderne">
+                        <div class="property-badge">À VENDRE</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Maison Moderne</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Abidjan, Cocody</p>
+                        <p class="property-description">Maison moderne avec 3 chambres, jardin, 200m²</p>
+                        <div class="property-price">120 000 000 FCFA</div>
+                        <a href="page1.html" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img12.jpg" alt="Villa de luxe">
+                        <div class="property-badge">À VENDRE</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Villa de Luxe</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Grand-Bassam</p>
+                        <p class="property-description">Villa prestige en bord de mer, 5 chambres, 400m²</p>
+                        <div class="property-price">250 000 000 FCFA</div>
+                        <a href="page1.html" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img14.jpg" alt="Maison Familiale">
+                        <div class="property-badge">À VENDRE</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Maison Familiale</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Abidjan, Marcory</p>
+                        <p class="property-description">Maison familiale spacieuse, 4 chambres, 280m²</p>
+                        <div class="property-price">95 000 000 FCFA</div>
+                        <a href="page1.html" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Vous avez trouvé la maison de vos rêves ?</h2>
+            <p>Contactez-nous pour organiser une visite</p>
+            <a href="index.html#contact" class="btn-primary">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo2.jpeg" alt="Epitec Sarl">
+                        <h3>Epitec Sarl</h3>
+                    </div>
+                    <p>L'immobilier par excellence</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="acheter.html">Achat</a></li>
+                        <li><a href="louer.html">Location</a></li>
+                        <li><a href="vendre.html">Vente</a></li>
+                        <li><a href="gestion.html">Gestion locative</a></li>
+                        <li><a href="syndic.html">Syndic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="page1.html">Nos biens</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Epitec Sarl. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

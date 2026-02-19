@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Epitec Sarl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo2.jpeg" alt="Epitec Sarl">
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="admin.html" class="active">ADMIN</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Section -->
+    <section class="admin-section">
+        <div class="container">
+            <div class="admin-content">
+                <h1>Administration des Contacts</h1>
+                <p>Visualisez et gérez les demandes de contact reçues</p>
+                
+                <div class="admin-actions">
+                    <button onclick="loadContacts()" class="btn-primary">
+                        <i class="fas fa-sync"></i> Rafraîchir les contacts
+                    </button>
+                    <button onclick="exportContacts()" class="btn-secondary">
+                        <i class="fas fa-download"></i> Exporter en CSV
+                    </button>
+                </div>
+
+                <div class="contacts-container">
+                    <div id="contacts-list">
+                        <div class="loading-message">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            Chargement des contacts...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo2.jpeg" alt="Epitec Sarl">
+                        <h3>Epitec Sarl</h3>
+                    </div>
+                    <p>L'immobilier par excellence</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Epitec Sarl. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function loadContacts() {
+            const contactsList = document.getElementById('contacts-list');
+            contactsList.innerHTML = '<div class="loading-message"><i class="fas fa-spinner fa-spin"></i> Chargement...</div>';
+            
+            fetch('view_contacts.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        displayContacts(data.contacts);
+                    } else {
+                        contactsList.innerHTML = '<div class="error-message">Erreur: ' + data.message + '</div>';
+                    }
+                })
+                .catch(error => {
+                    contactsList.innerHTML = '<div class="error-message">Erreur de connexion: ' + error.message + '</div>';
+                });
+        }
+
+        function displayContacts(contacts) {
+            const contactsList = document.getElementById('contacts-list');
+            
+            if (contacts.length === 0) {
+                contactsList.innerHTML = '<div class="no-contacts">Aucun contact trouvé</div>';
+                return;
+            }
+
+            let html = '<div class="table-container"><table class="contacts-table"><thead><tr><th>Nom</th><th>Email</th><th>Téléphone</th><th>Service</th><th>Message</th><th>Date</th><th>Actions</th></tr></thead><tbody>';
+            contacts.forEach(contact => {
+                html += `
+                    <tr>
+                        <td>${contact.nom}</td>
+                        <td>${contact.email}</td>
+                        <td>${contact.telephone || '-'}</td>
+                        <td>${contact.service}</td>
+                        <td>${contact.message ? contact.message.substring(0, 50) + (contact.message.length > 50 ? '...' : '') : '-'}</td>
+                        <td>${formatDate(contact.date_contact)}</td>
+                        <td>
+                            <button onclick="deleteContact(${contact.id})" class="btn-danger">
+                                <i class="fas fa-trash"></i> Supprimer
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+            html += '</tbody></table></div>';
+            
+            contactsList.innerHTML = html;
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('fr-FR', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        function deleteContact(id) {
+            if (confirm('Êtes-vous sûr de vouloir supprimer ce contact ?')) {
+                fetch('delete_contact.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'id=' + id
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        loadContacts(); // Recharger la liste
+                    } else {
+                        alert('Erreur lors de la suppression: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    alert('Erreur de connexion: ' + error.message);
+                });
+            }
+        }
+
+        function exportContacts() {
+            fetch('export_contacts.php')
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'contacts_epitec_' + new Date().toISOString().split('T')[0] + '.csv';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => {
+                    alert('Erreur lors de l\'export: ' + error.message);
+                });
+        }
+
+        // Charger les contacts au chargement de la page
+        document.addEventListener('DOMContentLoaded', loadContacts);
+    </script>
+
+    <style>
+    .admin-section {
+        padding: 2rem 0;
+        min-height: 80vh;
+    }
+    
+    .admin-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .admin-actions {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .contacts-container {
+        background: var(--accent-color);
+        padding: 2rem;
+        border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+        background: var(--white);
+        border-radius: 10px;
+        box-shadow: var(--shadow-md);
+    }
+    
+    .contacts-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+    }
+    
+    .contacts-table th {
+        background: var(--primary-color);
+        color: var(--white);
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .contacts-table td {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid var(--border-color);
+        vertical-align: top;
+    }
+    
+    .contacts-table tbody tr:hover {
+        background: #f8f9fa;
+    }
+    
+    .contacts-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+    
+    .contacts-table td:nth-child(5) {
+        max-width: 200px;
+        word-wrap: break-word;
+    }
+    
+    .contacts-table td:nth-child(6) {
+        white-space: nowrap;
+        font-size: 0.85rem;
+        color: var(--text-light);
+    }
+    
+    .btn-danger {
+        background-color: #dc3545;
+        color: var(--white);
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+    
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+    
+    .loading-message, .error-message, .no-contacts {
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .error-message {
+        color: var(--secondary-color);
+    }
+    
+    .no-contacts {
+        color: var(--text-light);
+    }
+    </style>
+</body>
+</html>

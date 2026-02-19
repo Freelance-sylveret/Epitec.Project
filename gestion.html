@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Locative - Epitec Sarl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.jpeg" alt="Epitec Sarl">
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="acheter.html">ACHETER</a></li>
+                        <li><a href="louer.html">LOUER</a></li>
+                        <li><a href="vendre.html">VENDRE</a></li>
+                        <li><a href="gestion.html" class="active">GESTION LOCATIVE</a></li>
+                        <li><a href="syndic.html">SYNDIC</a></li>
+                        <li><a href="actualites.html">ACTUALITÉS</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>GESTION LOCATIVE</h1>
+            <p>Confiez-nous la gestion complète de votre investissement immobilier</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h2>Une gestion sereine de vos biens</h2>
+                    <p>Epitec Sarl vous propose un service complet de gestion locative pour optimiser le rendement de vos investissements immobiliers tout en vous libérant des contraintes quotidiennes.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-search"></i>
+                            <h3>Recherche de locataires</h3>
+                            <p>Sélection rigoureuse et vérification des candidats</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-file-contract"></i>
+                            <h3>Gestion des baux</h3>
+                            <p>Rédaction et suivi des contrats de location</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-coins"></i>
+                            <h3>Encaissement des loyers</h3>
+                            <p>Guichet unique pour le paiement et suivi des loyers</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <h3>Maintenance et entretien</h3>
+                            <p>Intervention rapide pour toutes réparations</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Comptabilité</h3>
+                            <p>Relevés détaillés et déclarations fiscales</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-gavel"></i>
+                            <h3>Gestion des contentieux</h3>
+                            <p>Assistance juridique en cas de litige</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-form">
+                    <h3>Devis de gestion gratuit</h3>
+                    <form action="traitement.php" method="POST">
+                        <input type="hidden" name="service" value="gestion">
+                        <div class="form-group">
+                            <input type="text" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="nb_biens" placeholder="Nombre de biens à gérer" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="type_biens" required>
+                                <option value="">Type de biens</option>
+                                <option value="appartements">Appartements</option>
+                                <option value="maisons">Maisons</option>
+                                <option value="mixte">Mixte</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Informations complémentaires sur vos biens" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Demander un devis</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Les avantages de notre service</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Rendement optimisé</h3>
+                    <p>Maximisation de votre rentabilité grâce à notre expertise du marché</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sécurité juridique</h3>
+                    <p>Conformité totale avec la législation en vigueur</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-clock"></i>
+                    <h3>Gain de temps</h3>
+                    <p>Délégation complète de la gestion quotidienne</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-users"></i>
+                    <h3>Accompagnement personnalisé</h3>
+                    <p>Un gestionnaire dédié pour votre portefeuille</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Confiez-nous la gestion de vos biens</h2>
+            <p>Contactez-nous pour une étude personnalisée de votre portefeuille</p>
+            <a href="index.html#contact" class="btn-primary">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpeg" alt="Epitec Sarl">
+                        <h3>Epitec Sarl</h3>
+                    </div>
+                    <p>L'immobilier par excellence</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="acheter.html">Achat</a></li>
+                        <li><a href="louer.html">Location</a></li>
+                        <li><a href="vendre.html">Vente</a></li>
+                        <li><a href="gestion.html">Gestion locative</a></li>
+                        <li><a href="syndic.html">Syndic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="page1.html">Nos biens</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Epitec Sarl. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
