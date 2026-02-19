@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Offres Immobilières - Epitec Sarl</title>
+    <title>Louer - Epitec Sarl</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -20,7 +20,7 @@
                     <ul>
                         <li><a href="index.html">ACCUEIL</a></li>
                         <li><a href="acheter.html">ACHETER</a></li>
-                        <li><a href="louer.html">LOUER</a></li>
+                        <li><a href="louer.html" class="active">LOUER</a></li>
                         <li><a href="vendre.html">VENDRE</a></li>
                         <li><a href="gestion.html">GESTION LOCATIVE</a></li>
                         <li><a href="syndic.html">SYNDIC</a></li>
@@ -38,72 +38,63 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>NOS OFFRES IMMOBILIÈRES</h1>
-            <p>Découvrez notre sélection de biens exceptionnels</p>
+            <h1>LOUER UN BIEN</h1>
+            <p>Découvrez notre sélection de biens en location</p>
         </div>
     </section>
 
-    <section class="offres">
-        
-        <!-- Maison 1 -->
-        <div class="offre">
-            <img src="images/img21.jpg" alt="Maison Moderne">
-            <h2>Maison Moderne</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Abidjan, Cocody</p>
-            <p class="prix">Prix : 120 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
+    <!-- Properties Section -->
+    <section id="biens-location">
+        <div class="container">
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/image9.jpeg" alt="Appartement standing">
+                        <div class="property-badge">À LOUER</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>APPARTEMENT DE STANDING</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Zone 4, Abidjan</p>
+                        <p class="property-description">Appartement lumineux, 3 chambres, 180m², vue dégagée</p>
+                        <div class="property-price">350 000 FCFA/mois</div>
+                        <a href="detail-appartement-zone4.html" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img6.jpg" alt="Bureau commercial">
+                        <div class="property-badge">À LOUER</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>BUREAUX COMMERCIAUX</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Plateau, Abidjan</p>
+                        <p class="property-description">Espaces de bureaux modernes, 200m², parking inclus</p>
+                        <div class="property-price">800 000 FCFA/mois</div>
+                        <a href="detail-bureaux-plateau.html" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img14.jpg" alt="Maison en location">
+                        <div class="property-badge">À LOUER</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>MAISON DE VILLE</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cocody, Abidjan</p>
+                        <p class="property-description">Maison de ville avec jardin, 4 chambres, 250m²</p>
+                        <div class="property-price">450 000 FCFA/mois</div>
+                        <a href="detail-maison-cocody.html" class="property-link">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Maison 2 -->
-        <div class="offre">
-            <img src="images/img12.jpg" alt="Villa de luxe">
-            <h2>Villa de Luxe</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Grand-Bassam</p>
-            <p class="prix">Prix : 250 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <!-- Terrain 1 -->
-        <div class="offre">
-            <img src="images/img10.jpg" alt="Terrain résidentiel">
-            <h2>Terrain Résidentiel</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Bingerville</p>
-            <p class="prix">Prix : 35 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <!-- Terrain 2 -->
-        <div class="offre">
-            <img src="images/img4.jpg" alt="Terrain à bâtir">
-            <h2>Terrain à Bâtir</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Yopougon</p>
-            <p class="prix">Prix : 20 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <div class="offre">
-            <img src="images/img14.jpg" alt="Maison Moderne">
-            <h2>Maison Moderne</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Abidjan, Cocody</p>
-            <p class="prix">Prix : 120 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <div class="offre">
-            <img src="images/img13.jpg" alt="Maison Moderne">
-            <h2>Maison Moderne</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Abidjan, Cocody</p>
-            <p class="prix">Prix : 120 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
     </section>
 
     <!-- Contact Section -->
     <section class="contact-cta">
         <div class="container">
-            <h2>Vous avez trouvé le bien idéal ?</h2>
-            <p>Contactez-nous pour plus d'informations ou organiser une visite</p>
+            <h2>Vous souhaitez visiter un bien ?</h2>
+            <p>Contactez-nous pour prendre rendez-vous</p>
             <a href="index.html#contact" class="btn-primary">Nous contacter</a>
         </div>
     </section>

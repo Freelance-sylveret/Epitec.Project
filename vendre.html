@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendre - Epitec Sarl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo2.jpeg" alt="Epitec Sarl">
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="acheter.html">ACHETER</a></li>
+                        <li><a href="louer.html">LOUER</a></li>
+                        <li><a href="vendre.html" class="active">VENDRE</a></li>
+                        <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                        <li><a href="syndic.html">SYNDIC</a></li>
+                        <li><a href="actualites.html">ACTUALITÉS</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>VENDRE VOTRE BIEN</h1>
+            <p>Bénéficiez de notre expertise pour vendre votre bien au meilleur prix</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h2>Notre expertise à votre service</h2>
+                    <p>Depuis plus de 20 ans, Epitec Sarl accompagne les propriétaires dans la vente de leurs biens immobiliers. Notre connaissance approfondie du marché ivoirien et notre réseau international nous permettent de vous offrir le meilleur service.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Estimation précise</h3>
+                            <p>Évaluation de votre bien selon les prix du marché actuel</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-camera"></i>
+                            <h3>Photos professionnelles</h3>
+                            <p>Shooting photo et vidéo pour valoriser votre bien</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-globe"></i>
+                            <h3>Visibilité maximale</h3>
+                            <p>Diffusion sur tous les plateformes immobilières</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h3>Accompagnement complet</h3>
+                            <p>De l'estimation à la signature chez le notaire</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-form">
+                    <h3>Demande d'estimation gratuite</h3>
+                    <form action="traitement.php" method="POST">
+                        <input type="hidden" name="service" value="vente">
+                        <div class="form-group">
+                            <input type="text" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="adresse_bien" placeholder="Adresse du bien" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="type_bien" required>
+                                <option value="">Type de bien</option>
+                                <option value="maison">Maison</option>
+                                <option value="appartement">Appartement</option>
+                                <option value="terrain">Terrain</option>
+                                <option value="bureau">Bureau</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Description du bien et informations complémentaires" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Demander une estimation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3>300+</h3>
+                    <p>Biens vendus par an</p>
+                </div>
+                <div class="stat">
+                    <h3>45 jours</h3>
+                    <p>Délai moyen de vente</p>
+                </div>
+                <div class="stat">
+                    <h3>98%</h3>
+                    <p>Prix de vente atteint</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Prêt à vendre votre bien ?</h2>
+            <p>Contactez-nous pour une première estimation sans engagement</p>
+            <a href="index.html#contact" class="btn-primary">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo2.jpeg" alt="Epitec Sarl">
+                        <h3>Epitec Sarl</h3>
+                    </div>
+                    <p>L'immobilier par excellence</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="acheter.html">Achat</a></li>
+                        <li><a href="louer.html">Location</a></li>
+                        <li><a href="vendre.html">Vente</a></li>
+                        <li><a href="gestion.html">Gestion locative</a></li>
+                        <li><a href="syndic.html">Syndic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="page1.html">Nos biens</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Epitec Sarl. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

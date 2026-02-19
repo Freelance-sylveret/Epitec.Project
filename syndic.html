@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syndic - Epitec Sarl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo2.jpeg" alt="Epitec Sarl">
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="acheter.html">ACHETER</a></li>
+                        <li><a href="louer.html">LOUER</a></li>
+                        <li><a href="vendre.html">VENDRE</a></li>
+                        <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                        <li><a href="syndic.html" class="active">SYNDIC</a></li>
+                        <li><a href="actualites.html">ACTUALITÉS</a></li>
+                        <li><a href="index.html#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>SYNDIC DE CO-PROPRIÉTÉ</h1>
+            <p>Une gestion professionnelle de votre immeuble en co-propriété</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-info">
+                    <h2>Expertise en syndic de co-propriété</h2>
+                    <p>Epitec Sarl assure la gestion complète de votre co-propriété dans le respect de la réglementation et au meilleur service des copropriétaires.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h3>Gestion des assemblées</h3>
+                            <p>Organisation des AG et rédaction des procès-verbaux</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <h3>Comptabilité</h3>
+                            <p>Budget prévisionnel, appels de fonds et comptes annuels</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-hammer"></i>
+                            <h3>Travaux et entretien</h3>
+                            <p>Planification et suivi des travaux de l'immeuble</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Assurances</h3>
+                            <p>Gestion des contrats d'assurance multirisques</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-balance-scale"></i>
+                            <h3>Contentieux</h3>
+                            <p>Gestion des litiges et recouvrement des charges</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clipboard-check"></i>
+                            <h3>Conformité réglementaire</h3>
+                            <p>Respect des obligations légales et réglementaires</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-form">
+                    <h3>Demande de devis syndic</h3>
+                    <form action="traitement.php" method="POST">
+                        <input type="hidden" name="service" value="syndic">
+                        <div class="form-group">
+                            <input type="text" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="nom_copro" placeholder="Nom de la co-propriété" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="nb_lots" placeholder="Nombre de lots" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Informations sur votre co-propriété et besoins spécifiques" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Demander un devis</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2>Notre expertise en chiffres</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Co-propriétés gérées</p>
+                </div>
+                <div class="stat">
+                    <h3>2000+</h3>
+                    <p> lots copropriétaires</p>
+                </div>
+                <div class="stat">
+                    <h3>15 ans</h3>
+                    <p>D'expérience en syndic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Vous cherchez un syndic professionnel ?</h2>
+            <p>Contactez-nous pour étudier la gestion de votre co-propriété</p>
+            <a href="index.html#contact" class="btn-primary">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo2.jpeg" alt="Epitec Sarl">
+                        <h3>Epitec Sarl</h3>
+                    </div>
+                    <p>L'immobilier par excellence</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="acheter.html">Achat</a></li>
+                        <li><a href="louer.html">Location</a></li>
+                        <li><a href="vendre.html">Vente</a></li>
+                        <li><a href="gestion.html">Gestion locative</a></li>
+                        <li><a href="syndic.html">Syndic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="page1.html">Nos biens</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Epitec Sarl. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

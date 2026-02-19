@@ -55,8 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Basic validation
             const requiredFields = contactForm.querySelectorAll('[required]');
             let isValid = true;
@@ -70,27 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            if (isValid) {
-                // Show success message
-                const successMessage = document.createElement('div');
-                successMessage.className = 'success-message';
-                successMessage.textContent = 'Message envoyé avec succès! Nous vous contacterons rapidement.';
-                successMessage.style.cssText = `
-                    background: #28a745;
-                    color: white;
-                    padding: 1rem;
-                    border-radius: 5px;
-                    margin-bottom: 1rem;
-                    text-align: center;
-                `;
-                
-                contactForm.parentNode.insertBefore(successMessage, contactForm);
-                contactForm.reset();
-                
-                // Remove success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.remove();
-                }, 5000);
+            if (!isValid) {
+                e.preventDefault();
+            } else {
+                // Let the form submit normally to PHP
+                // The form will be submitted to traitement.php
+                console.log('Form submitted to PHP');
             }
         });
     }

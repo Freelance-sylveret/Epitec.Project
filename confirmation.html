@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Offres Immobilières - Epitec Sarl</title>
+    <title>Confirmation - Epitec Sarl</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -35,76 +35,22 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Confirmation Section -->
+    <section class="confirmation-section">
         <div class="container">
-            <h1>NOS OFFRES IMMOBILIÈRES</h1>
-            <p>Découvrez notre sélection de biens exceptionnels</p>
-        </div>
-    </section>
-
-    <section class="offres">
-        
-        <!-- Maison 1 -->
-        <div class="offre">
-            <img src="images/img21.jpg" alt="Maison Moderne">
-            <h2>Maison Moderne</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Abidjan, Cocody</p>
-            <p class="prix">Prix : 120 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <!-- Maison 2 -->
-        <div class="offre">
-            <img src="images/img12.jpg" alt="Villa de luxe">
-            <h2>Villa de Luxe</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Grand-Bassam</p>
-            <p class="prix">Prix : 250 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <!-- Terrain 1 -->
-        <div class="offre">
-            <img src="images/img10.jpg" alt="Terrain résidentiel">
-            <h2>Terrain Résidentiel</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Bingerville</p>
-            <p class="prix">Prix : 35 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <!-- Terrain 2 -->
-        <div class="offre">
-            <img src="images/img4.jpg" alt="Terrain à bâtir">
-            <h2>Terrain à Bâtir</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Yopougon</p>
-            <p class="prix">Prix : 20 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <div class="offre">
-            <img src="images/img14.jpg" alt="Maison Moderne">
-            <h2>Maison Moderne</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Abidjan, Cocody</p>
-            <p class="prix">Prix : 120 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-        <div class="offre">
-            <img src="images/img13.jpg" alt="Maison Moderne">
-            <h2>Maison Moderne</h2>
-            <p><i class="fa-solid fa-location-dot"></i> Abidjan, Cocody</p>
-            <p class="prix">Prix : 120 000 000 FCFA</p>
-            <a href="detail-maison-moderne-1.html" class="btn">Voir plus</a>
-        </div>
-
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-cta">
-        <div class="container">
-            <h2>Vous avez trouvé le bien idéal ?</h2>
-            <p>Contactez-nous pour plus d'informations ou organiser une visite</p>
-            <a href="index.html#contact" class="btn-primary">Nous contacter</a>
+            <div class="confirmation-content">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>Message envoyé avec succès !</h1>
+                <p>Merci de nous avoir contactés. Votre message a bien été reçu et nous vous répondrons dans les plus brefs délais.</p>
+                <p>Un conseiller Epitec Sarl prendra contact avec vous rapidement pour étudier votre demande.</p>
+                
+                <div class="confirmation-actions">
+                    <a href="index.html" class="btn-primary">Retour à l'accueil</a>
+                    <a href="index.html#contact" class="btn-secondary">Nouveau message</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -151,5 +97,46 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <style>
+    .confirmation-section {
+        padding: 8rem 0;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    .confirmation-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .confirmation-icon {
+        font-size: 4rem;
+        color: #28a745;
+        margin-bottom: 2rem;
+    }
+    
+    .confirmation-content h1 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+    }
+    
+    .confirmation-content p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+    }
+    
+    .confirmation-actions {
+        margin-top: 3rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    </style>
 </body>
 </html>
