@@ -1,2 +1,2 @@
 # Epitec.sarl
-Site web vitrine pour Epitec Sarl
+Site web vitrine pour Epitec
