@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -14,81 +14,201 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="images/logo2.jpeg" alt="Epitec">
+                    <a href="index.html" style="text-decoration: none;">
+                        <img src="images/logo2.jpeg" alt="Epitec">
+                    </a>
                 </div>
                 <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">ACCUEIL</a></li>
-                        <li><a href="acheter.html">ACHETER</a></li>
-                        <li><a href="louer.html">LOUER</a></li>
-                        <li><a href="vendre.html">VENDRE</a></li>
-                        <li><a href="gestion.html" class="active">GESTION LOCATIVE</a></li>
-                        <li><a href="syndic.html">SYNDIC</a></li>
-                        <li><a href="actualites.html">ACTUALITÉS</a></li>
-                        <li><a href="index.html#contact">CONTACT</a></li>
-                    </ul>
+                    <div class="nav-container">
+                        <!-- Hamburger -->
+                        <div class="menu-toggle" id="menu-toggle">
+                            ☰
+                        </div>
+
+                        <!-- Menu -->
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="acheter.html">ACHETER</a></li>
+                            <li class="dropdown">
+                                <a href="location.html">LOUER <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="louer.html">Appartements</a></li>
+                                    <li><a href="maison.html">Maisons et Villas</a></li>
+                                    <li><a href="terrain.html">Terrains</a></li>
+                                    <li><a href="location.html">Tous nos biens</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                            <li><a href="rendezvous.html">PRENDRE RENDEZ-VOUS</a></li>
+                            <li class="dropdown">
+                                <a href="#">RESSOURCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="actualites.html">Actualités</a></li>
+                                    <li><a href="#">Guides immobiliers</a></li>
+                                    <li><a href="#">Conseils d'experts</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">NOS AGENCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Abidjan</a></li>
+                                    <li><a href="#">San Pedro</a></li>
+                                    <li><a href="#">Grand Bassam</a></li>
+                                    <li><a href="#">Toutes les agences</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-                <div class="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </div>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section id="hero" style="background: linear-gradient(rgba(0, 46, 96, 0.8), rgba(0, 46, 96, 0.8)), url('images/img7.jpeg') center/cover; min-height: 60vh; margin-top: 80px;">
         <div class="container">
-            <h1>GESTION LOCATIVE</h1>
-            <p>Confiez-nous la gestion complète de votre investissement immobilier</p>
+            <div class="hero-content">
+                <h1 style="color: var(--white);">Gestion Locative</h1>
+                <p style="color: var(--white);">Confiez la gestion de vos biens à des professionnels</p>
+                <p style="color: var(--white);">Epitec s'occupe de tout : recherche de locataires, gestion quotidienne, entretien...</p>
+            </div>
         </div>
     </section>
 
-    <!-- Service Content -->
-    <section class="service-content">
+    <!-- Services Section -->
+    <section id="services" style="padding: 5rem 0; background-color: var(--accent-color);">
         <div class="container">
-            <div class="service-grid">
-                <div class="service-info">
-                    <h2>Une gestion sereine de vos biens</h2>
-                    <p>Epitec vous propose un service complet de gestion locative pour optimiser le rendement de vos investissements immobiliers tout en vous libérant des contraintes quotidiennes.</p>
-                    
-                    <div class="service-features">
-                        <div class="feature">
-                            <i class="fas fa-search"></i>
-                            <h3>Recherche de locataires</h3>
-                            <p>Sélection rigoureuse et vérification des candidats</p>
+            <h2>CE QUE NOUS FAISONS EN GESTION LOCATIVE</h2>
+            
+            <!-- Service 1: Image droite, texte gauche -->
+            <div class="service-item" style="display: flex; align-items: center; margin-bottom: 4rem; gap: 3rem;">
+                <div class="service-text" style="flex: 1;">
+                    <h3 style="color: var(--sky-blue); margin-bottom: 1rem;">Recherche de Locataires</h3>
+                    <p>Nous trouvons les locataires idéaux pour vos biens avec des critères de sélection rigoureux et une vérification complète des dossiers.</p>
+                </div>
+                <div class="service-image" style="flex: 1;">
+                    <img src="images/img7.jpeg" alt="Recherche de Locataires" style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+
+            <!-- Service 2: Image gauche, texte droite -->
+            <div class="service-item" style="display: flex; align-items: center; margin-bottom: 4rem; gap: 3rem;">
+                <div class="service-image" style="flex: 1;">
+                    <img src="images/image9.jpeg" alt="Gestion des Baux" style="width: 100%; border-radius: 10px;">
+                </div>
+                <div class="service-text" style="flex: 1;">
+                    <h3 style="color: var(--sky-blue); margin-bottom: 1rem;">Gestion des Baux</h3>
+                    <p>Rédaction, renouvellement et suivi de tous les contrats de location en toute conformité légale.</p>
+                </div>
+            </div>
+
+            <!-- Service 3: Image droite, texte gauche -->
+            <div class="service-item" style="display: flex; align-items: center; margin-bottom: 4rem; gap: 3rem;">
+                <div class="service-text" style="flex: 1;">
+                    <h3 style="color: var(--sky-blue); margin-bottom: 1rem;">Encaissement des Loyers</h3>
+                    <p>Guichet unique pour la perception des loyers et suivi rigoureux des paiements avec reporting mensuel.</p>
+                </div>
+                <div class="service-image" style="flex: 1;">
+                    <img src="images/img6.jpg" alt="Encaissement des Loyers" style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+
+            <!-- Service 4: Image gauche, texte droite -->
+            <div class="service-item" style="display: flex; align-items: center; margin-bottom: 4rem; gap: 3rem;">
+                <div class="service-image" style="flex: 1;">
+                    <img src="images/img7.jpeg" alt="Maintenance et Entretien" style="width: 100%; border-radius: 10px;">
+                </div>
+                <div class="service-text" style="flex: 1;">
+                    <h3 style="color: var(--sky-blue); margin-bottom: 1rem;">Maintenance et Entretien</h3>
+                    <p>Intervention rapide pour tous travaux d'entretien et de réparation dans vos biens avec réseau d'artisans qualifiés.</p>
+                </div>
+            </div>
+
+            <!-- Service 5: Image droite, texte gauche -->
+            <div class="service-item" style="display: flex; align-items: center; margin-bottom: 4rem; gap: 3rem;">
+                <div class="service-text" style="flex: 1;">
+                    <h3 style="color: var(--sky-blue); margin-bottom: 1rem;">Reporting et Suivi</h3>
+                    <p>Rapports détaillés sur l'état de vos biens, les loyers perçus et les interventions avec accès client en ligne.</p>
+                </div>
+                <div class="service-image" style="flex: 1;">
+                    <img src="images/image9.jpeg" alt="Reporting Mensuel" style="width: 100%; border-radius: 10px;">
+                </div>
+            </div>
+
+            <!-- Service 6: Image gauche, texte droite -->
+            <div class="service-item" style="display: flex; align-items: center; margin-bottom: 4rem; gap: 3rem;">
+                <div class="service-image" style="flex: 1;">
+                    <img src="images/img6.jpg" alt="Assurance Juridique" style="width: 100%; border-radius: 10px;">
+                </div>
+                <div class="service-text" style="flex: 1;">
+                    <h3 style="color: var(--sky-blue); margin-bottom: 1rem;">Assurance Juridique</h3>
+                    <p>Protection contre les impayés et assistance juridique en cas de litige avec procédures de recouvrement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages Section -->
+    <section id="avantages" style="padding: 5rem 0;">
+        <div class="container">
+            <h2>POURQUOI CHOISIR Epitec ?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Expertise 20+ ans</h3>
+                    <p>Plus de 20 ans d'expérience dans la gestion immobilière en Côte d'Ivoire.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Équipe Dédiée</h3>
+                    <p>Des gestionnaires immobiliers professionnels à votre écoute.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Suivi Digital</h3>
+                    <p>Plateforme en ligne pour suivre vos biens et vos revenus en temps réel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: var(--sky-blue);">
+        <div class="container">
+            <h2>CONTACTEZ-NOUS</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>T?l?phone</h3>
+                            <p>(+225) 07 04 69 82 01</p>
+                            <p>(+225) 25 20 00 24 97</p>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-file-contract"></i>
-                            <h3>Gestion des baux</h3>
-                            <p>Rédaction et suivi des contrats de location</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-coins"></i>
-                            <h3>Encaissement des loyers</h3>
-                            <p>Guichet unique pour le paiement et suivi des loyers</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-tools"></i>
-                            <h3>Maintenance et entretien</h3>
-                            <p>Intervention rapide pour toutes réparations</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-calculator"></i>
-                            <h3>Comptabilité</h3>
-                            <p>Relevés détaillés et déclarations fiscales</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-gavel"></i>
-                            <h3>Gestion des contentieux</h3>
-                            <p>Assistance juridique en cas de litige</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@epitec.ci</p>
+                            <div style="margin-top: 1rem; color: var(--text-dark);">
+                                <p style="font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">Les rendez-vous pris avec Epitec sont :</p>
+                                <p style="font-size: 0.8rem; margin-bottom: 0.3rem;">? Gratuits</p>
+                                <p style="font-size: 0.8rem; margin-bottom: 0.3rem;">? Adapt?s ? vos besoins</p>
+                                <p style="font-size: 0.8rem;">? Discrets et confidentiels</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="service-form">
-                    <h3>Devis de gestion gratuit</h3>
-                    <form action="traitement.php" method="POST">
-                        <input type="hidden" name="service" value="gestion">
+                <div class="contact-form">
+                    <form action="./traitement.php" method="POST">
                         <div class="form-group">
                             <input type="text" name="nom" placeholder="Votre nom" required>
                         </div>
@@ -96,64 +216,26 @@
                             <input type="email" name="email" placeholder="Votre email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+                            <input type="tel" name="telephone" placeholder="Votre t?l?phone">
                         </div>
                         <div class="form-group">
-                            <input type="number" name="nb_biens" placeholder="Nombre de biens à gérer" required>
-                        </div>
-                        <div class="form-group">
-                            <select name="type_biens" required>
-                                <option value="">Type de biens</option>
-                                <option value="appartements">Appartements</option>
-                                <option value="maisons">Maisons</option>
-                                <option value="mixte">Mixte</option>
+                            <select name="service" required>
+                                <option value="">Choisir un service</option>
+                                <option value="achat">Achat</option>
+                                <option value="location">Location</option>
+                                <option value="vente">Vente</option>
+                                <option value="gestion">Gestion locative</option>
+                                <option value="syndic">Syndic</option>
+                                <option value="autre">Autre</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Informations complémentaires sur vos biens" rows="4" required></textarea>
+                            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary">Demander un devis</button>
+                        <button type="submit" class="btn-primary">Envoyer le message</button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits-section">
-        <div class="container">
-            <h2>Les avantages de notre service</h2>
-            <div class="benefits-grid">
-                <div class="benefit">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Rendement optimisé</h3>
-                    <p>Maximisation de votre rentabilité grâce à notre expertise du marché</p>
-                </div>
-                <div class="benefit">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Sécurité juridique</h3>
-                    <p>Conformité totale avec la législation en vigueur</p>
-                </div>
-                <div class="benefit">
-                    <i class="fas fa-clock"></i>
-                    <h3>Gain de temps</h3>
-                    <p>Délégation complète de la gestion quotidienne</p>
-                </div>
-                <div class="benefit">
-                    <i class="fas fa-users"></i>
-                    <h3>Accompagnement personnalisé</h3>
-                    <p>Un gestionnaire dédié pour votre portefeuille</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-cta">
-        <div class="container">
-            <h2>Confiez-nous la gestion de vos biens</h2>
-            <p>Contactez-nous pour une étude personnalisée de votre portefeuille</p>
-            <a href="index.html#contact" class="btn-primary">Nous contacter</a>
         </div>
     </section>
 
@@ -162,43 +244,84 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo2.jpeg" alt="Epitec">
-                        <h3>Epitec</h3>
-                    </div>
-                    <p>L'immobilier par excellence</p>
+                    <h3 style="color: var(--text-dark);">Epitec Immobilier</h3>
+                    <p style="color: var(--text-dark);">Abidjan, Cocody<br>Côte d'Ivoire</p>
+                    <p style="color: var(--text-dark);">Agence immobilière agréée en Côte d'Ivoire</p>
+                    <p style="color: var(--text-dark);">L'immobilier par excellence</p>
+                </div>
+                <div class="footer-section">
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: var(--text-dark);">Suivez-nous</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="acheter.html">Achat</a></li>
-                        <li><a href="louer.html">Location</a></li>
-                        <li><a href="vendre.html">Vente</a></li>
-                        <li><a href="gestion.html">Gestion locative</a></li>
-                        <li><a href="syndic.html">Syndic</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Liens utiles</h4>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="page1.html">Nos biens</a></li>
-                        <li><a href="actualites.html">Actualités</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
+                    <p style="margin-top: 1rem; color: var(--text-dark);">
+                        <a href="#" style="color: var(--text-dark);">Politique de confidentialité</a><br>
+                        <a href="#" style="color: var(--text-dark);">Accessibilité</a>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--text-dark);">&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--text-dark);">Epitec Services Immobiliers Spécialisés, Société à Responsabilité Limitée</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Ouvrir / fermer menu mobile
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Dropdown au clic sur la flèche
+        document.querySelectorAll('.arrow').forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const dropdown = this.closest('.dropdown');
+                
+                // Fermer les autres dropdowns
+                document.querySelectorAll('.dropdown').forEach(item => {
+                    if (item !== dropdown) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Dropdown au survol sur desktop
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.add('active');
+                }
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
+
+
+

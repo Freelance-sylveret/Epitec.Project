@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -9,81 +9,197 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
+     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="images/logo2.jpeg" alt="Epitec">
+                    <a href="index.html" style="text-decoration: none;">
+                        <img src="images/logo2.jpeg" alt="Epitec">
+                    </a>
                 </div>
                 <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">ACCUEIL</a></li>
-                        <li><a href="acheter.html" class="active">ACHETER</a></li>
-                        <li><a href="louer.html">LOUER</a></li>
-                        <li><a href="vendre.html">VENDRE</a></li>
-                        <li><a href="gestion.html">GESTION LOCATIVE</a></li>
-                        <li><a href="syndic.html">SYNDIC</a></li>
-                        <li><a href="actualites.html">ACTUALITÉS</a></li>
-                        <li><a href="index.html#contact">CONTACT</a></li>
-                    </ul>
+                    <div class="nav-container">
+                        <!-- Hamburger -->
+                        <div class="menu-toggle" id="menu-toggle">
+                            ☰
+                        </div>
+
+                        <!-- Menu -->
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="acheter.html">ACHETER</a></li>
+                            <li class="dropdown">
+                                <a href="location.html">LOUER <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="louer.html">Appartements</a></li>
+                                    <li><a href="maison.html">Maisons et Villas</a></li>
+                                    <li><a href="terrain.html">Terrains</a></li>
+                                    <li><a href="location.html">Tous nos biens</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                            <li><a href="rendezvous.html">PRENDRE RENDEZ-VOUS</a></li>
+                            <li class="dropdown">
+                                <a href="#">RESSOURCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="actualites.html">Actualités</a></li>
+                                    <li><a href="#">Guides immobiliers</a></li>
+                                    <li><a href="#">Conseils d'experts</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">NOS AGENCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Abidjan</a></li>
+                                    <li><a href="#">San Pedro</a></li>
+                                    <li><a href="#">Grand Bassam</a></li>
+                                    <li><a href="#">Toutes les agences</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-                <div class="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </div>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section id="hero" style="background: linear-gradient(rgba(0, 46, 96, 0.8), rgba(0, 46, 96, 0.8)), url('images/img7.jpeg') center/cover; min-height: 60vh; margin-top: 80px;">
         <div class="container">
-            <h1>ACHETER VOTRE BIEN</h1>
-            <p>Découvrez notre sélection exclusive de biens à vendre</p>
+            <div class="hero-content">
+                <h1 style="color: var(--white);">Acheter un Bien Immobilier</h1>
+                <p style="color: var(--white);">Trouvez la maison, villa ou bureau de vos rêves</p>
+                <p style="color: var(--white);">Large sélection de biens à vendre dans les meilleures zones</p>
+            </div>
         </div>
     </section>
 
     <!-- Properties Section -->
-    <section id="biens-achat">
+    <section id="biens" style="padding: 5rem 0;">
         <div class="container">
+            <h2>NOS BIENS A VENDRE</h2>
+            
+            <!-- Villas Section -->
+            <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--sky-blue);">VILLAS DE LUXE</h3>
             <div class="properties-grid">
                 <div class="property-card">
                     <div class="property-image">
-                        <img src="images/img7.jpeg" alt="Villa de luxe">
-                        <div class="property-badge">À VENDRE</div>
+                        <img src="images/img7.jpeg" alt="Villa Cocody">
+                        <div class="property-badge">VILLA</div>
                     </div>
                     <div class="property-content">
-                        <h3>VILLA DE LUXE</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cocody, Abidjan</p>
-                        <p class="property-description">Villa exceptionnelle avec piscine et jardin, 4 chambres, 350m²</p>
-                        <div class="property-price">85 000 000 FCFA</div>
-                        <a href="detail-villa-luxe.html" class="property-link">Voir les détails</a>
+                        <h3>Villa 5 Chambres Cocody</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Cocody, Abidjan
+                        </div>
+                        <div class="property-description">
+                            Somptueuse villa de 400m² avec 5 chambres, piscine, jardin, garage 3 voitures.
+                        </div>
+                        <div class="property-price">
+                            <strong>150 000 000 FCFA</strong>
+                        </div>
                     </div>
                 </div>
                 <div class="property-card">
                     <div class="property-image">
-                        <img src="images/img21.jpg" alt="Maison Moderne">
-                        <div class="property-badge">À VENDRE</div>
+                        <img src="images/image9.jpeg" alt="Villa Riviera">
+                        <div class="property-badge">VILLA</div>
                     </div>
                     <div class="property-content">
-                        <h3>MAISON MODERNE</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Abidjan, Cocody</p>
-                        <p class="property-description">Maison moderne avec 3 chambres, jardin, 200m²</p>
-                        <div class="property-price">120 000 000 FCFA</div>
-                        <a href="detail-maison-moderne.html" class="property-link">Voir les détails</a>
+                        <h3>Villa 4 Chambres Riviera</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Riviera, Abidjan
+                        </div>
+                        <div class="property-description">
+                            Magnifique villa de 350m² avec 4 chambres, piscine, terrasse panoramique.
+                        </div>
+                        <div class="property-price">
+                            <strong>120 000 000 FCFA</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Appartements Section -->
+            <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--sky-blue);">APPARTEMENTS</h3>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img6.jpg" alt="Appartement Plateau">
+                        <div class="property-badge">APPARTEMENT</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>T4 Meublée Plateau</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Plateau, Abidjan
+                        </div>
+                        <div class="property-description">
+                            Spacieux T4 de 120m² avec 3 chambres, 2 salles de bain, balcon.
+                        </div>
+                        <div class="property-price">
+                            <strong>45 000 000 FCFA</strong>
+                        </div>
                     </div>
                 </div>
                 <div class="property-card">
                     <div class="property-image">
-                        <img src="images/img12.jpg" alt="Villa de luxe">
-                        <div class="property-badge">À VENDRE</div>
+                        <img src="images/img7.jpeg" alt="Appartement Marcory">
+                        <div class="property-badge">APPARTEMENT</div>
                     </div>
                     <div class="property-content">
-                        <h3>VILLA DE LUXE</h3>
-                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Grand-Bassam</p>
-                        <p class="property-description">Villa prestige en bord de mer, 5 chambres, 400m²</p>
-                        <div class="property-price">250 000 000 FCFA</div>
-                        <a href="detail-villa-grand-bassam.html" class="property-link">Voir les détails</a>
+                        <h3>T3 Marcory</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Marcory, Abidjan
+                        </div>
+                        <div class="property-description">
+                            Bel appartement T3 de 85m² avec 2 chambres, salon, cuisine équipée.
+                        </div>
+                        <div class="property-price">
+                            <strong>35 000 000 FCFA</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bureaux Section -->
+            <h3 style="text-align: center; margin: 3rem 0 2rem 0; color: var(--sky-blue);">BUREAUX ET COMMERCES</h3>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/image9.jpeg" alt="Bureau Plateau">
+                        <div class="property-badge">BUREAU</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Bureau 200mÂ² Plateau</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Plateau, Abidjan
+                        </div>
+                        <div class="property-description">
+                            Bureau moderne de 200m² en plein centre des affaires, climatisé, sécurisé.
+                        </div>
+                        <div class="property-price">
+                            <strong>80 000 000 FCFA</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="images/img6.jpg" alt="Local Commercial">
+                        <div class="property-badge">COMMERCIAL</div>
+                    </div>
+                    <div class="property-content">
+                        <h3>Local Commercial 150m²</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Zone 4, Abidjan
+                        </div>
+                        <div class="property-description">
+                            Local commercial idéal pour boutique ou restaurant, grande vitrine.
+                        </div>
+                        <div class="property-price">
+                            <strong>60 000 000 FCFA</strong>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,10 +207,62 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-cta">
+    <section id="contact" style="background: var(--sky-blue);">
         <div class="container">
-            <p>Contactez-nous pour organiser une visite</p>
-            <a href="index.html#contact" class="btn-primary">Nous contacter</a>
+            <h2>CONTACTEZ-NOUS</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>(+225) 07 04 69 82 01</p>
+                            <p>(+225) 25 20 00 24 97</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@epitec.ci</p>
+                            <div style="margin-top: 1rem; color: var(--text-dark);">
+                                <p style="font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">Les rendez-vous pris avec Epitec sont :</p>
+                                <p style="font-size: 0.8rem; margin-bottom: 0.3rem;">? Gratuits</p>
+                                <p style="font-size: 0.8rem; margin-bottom: 0.3rem;">? Adapt?s ? vos besoins</p>
+                                <p style="font-size: 0.8rem;">? Discrets et confidentiels</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="./traitement.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telephone" placeholder="Votre t?l?phone">
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="">Choisir un service</option>
+                                <option value="achat">Achat</option>
+                                <option value="location">Location</option>
+                                <option value="vente">Vente</option>
+                                <option value="gestion">Gestion locative</option>
+                                <option value="syndic">Syndic</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -103,43 +271,84 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo2.jpeg" alt="Epitec">
-                        <h3>Epitec</h3>
-                    </div>
-                    <p>L'immobilier par excellence</p>
+                    <h3 style="color: var(--text-dark);">Epitec Immobilier</h3>
+                    <p style="color: var(--text-dark);">Abidjan, Cocody<br>Côte d'Ivoire</p>
+                    <p style="color: var(--text-dark);">Agence immobilière agréée en Côte d'Ivoire</p>
+                    <p style="color: var(--text-dark);">L'immobilier par excellence</p>
+                </div>
+                <div class="footer-section">
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: var(--text-dark);">Suivez-nous</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="acheter.html">Achat</a></li>
-                        <li><a href="louer.html">Location</a></li>
-                        <li><a href="vendre.html">Vente</a></li>
-                        <li><a href="gestion.html">Gestion locative</a></li>
-                        <li><a href="syndic.html">Syndic</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Liens utiles</h4>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="page1.html">Nos biens</a></li>
-                        <li><a href="actualites.html">Actualités</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
+                    <p style="margin-top: 1rem; color: var(--text-dark);">
+                        <a href="#" style="color: var(--text-dark);">Politique de confidentialité</a><br>
+                        <a href="#" style="color: var(--text-dark);">Accessibilité</a>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--text-dark);">&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--text-dark);">Epitec Services Immobiliers Spécialisés, Société à Responsabilité Limitée</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Ouvrir / fermer menu mobile
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Dropdown au clic sur la flÃ¨che
+        document.querySelectorAll('.arrow').forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const dropdown = this.closest('.dropdown');
+                
+                // Fermer les autres dropdowns
+                document.querySelectorAll('.dropdown').forEach(item => {
+                    if (item !== dropdown) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Dropdown au survol sur desktop
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.add('active');
+                }
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
+
+
+
