@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualités - Epitec</title>
+    <title>ActualitÃ©s - Epitec</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -14,103 +14,137 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="images/logo2.jpeg" alt="Epitec">
+                    <a href="index.html" style="text-decoration: none;">
+                        <img src="images/logo2.jpeg" alt="Epitec">
+                    </a>
                 </div>
                 <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">ACCUEIL</a></li>
-                        <li><a href="acheter.html">ACHETER</a></li>
-                        <li><a href="louer.html">LOUER</a></li>
-                        <li><a href="vendre.html">VENDRE</a></li>
-                        <li><a href="gestion.html">GESTION LOCATIVE</a></li>
-                        <li><a href="syndic.html">SYNDIC</a></li>
-                        <li><a href="actualites.html" class="active">ACTUALITÉS</a></li>
-                        <li><a href="index.html#contact">CONTACT</a></li>
-                    </ul>
+                    <div class="nav-container">
+                        <!-- Hamburger -->
+                        <div class="menu-toggle" id="menu-toggle">
+                            ☰
+                        </div>
+
+                        <!-- Menu -->
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="acheter.html">ACHETER</a></li>
+                            <li class="dropdown">
+                                <a href="location.html">LOUER <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="louer.html">Appartements</a></li>
+                                    <li><a href="maison.html">Maisons et Villas</a></li>
+                                    <li><a href="terrain.html">Terrains</a></li>
+                                    <li><a href="location.html">Tous nos biens</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                            <li><a href="rendezvous.html">PRENDRE RENDEZ-VOUS</a></li>
+                            <li class="dropdown">
+                                <a href="#">RESSOURCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="actualites.html">Actualités</a></li>
+                                    <li><a href="#">Guides immobiliers</a></li>
+                                    <li><a href="#">Conseils d'experts</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">NOS AGENCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Abidjan</a></li>
+                                    <li><a href="#">San Pedro</a></li>
+                                    <li><a href="#">Grand Bassam</a></li>
+                                    <li><a href="#">Toutes les agences</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-                <div class="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </div>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section id="hero" style="background: linear-gradient(rgba(0, 46, 96, 0.8), rgba(0, 46, 96, 0.8)), url('images/img7.jpeg') center/cover; min-height: 60vh; margin-top: 80px;">
         <div class="container">
-            <h1>ACTUALITÉS IMMOBILIÈRES</h1>
-            <p>Découvrez les dernières tendances du marché immobilier</p>
+            <div class="hero-content">
+                <h1 style="color: var(--white);">Actualités Immobilières</h1>
+                <p style="color: var(--white);">Les dernières nouvelles du marché immobilier en Côte d'Ivoire</p>
+                <p style="color: var(--white);">Restez informés des tendances et opportunités du secteur</p>
+            </div>
         </div>
     </section>
 
     <!-- News Section -->
-    <section class="news-section">
+    <section id="actualites" style="padding: 5rem 0;">
         <div class="container">
+            <h2>TOUTES NOS ACTUALITÉS</h2>
             <div class="news-grid">
                 <article class="news-card">
                     <div class="news-image">
                         <img src="images/img7.jpeg" alt="Actualité 1">
-                        <div class="news-date">15 Février 2025</div>
+                        <div class="news-date">15 Février 2026</div>
                     </div>
                     <div class="news-content">
                         <h3>Le marché immobilier abidjanais en pleine expansion</h3>
-                        <p>Découvrez les dernières tendances du marché immobilier à Abidjan avec une croissance de 12% ce semestre. Les quartiers de Cocody et du Plateau connaissent une forte demande...</p>
-                        <a href="actualite-marche-abidjan.html" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        <p>Découvrez les dernières tendances du marché immobilier à Abidjan avec une croissance de 12% ce semestre...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
                         <img src="images/image9.jpeg" alt="Actualité 2">
-                        <div class="news-date">10 Février 2025</div>
+                        <div class="news-date">10 Février 2026</div>
                     </div>
                     <div class="news-content">
                         <h3>Nouveau programme de villas de luxe à Cocody</h3>
-                        <p>Epitec lance un programme exclusif de 15 villas haut de gamme avec piscine et jardin. Un projet résidentiel d'exception qui répond aux attentes d'une clientèle exigeante...</p>
-                        <a href="actualite-villas-cocody.html" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        <p>Epitec lance un programme exclusif de 15 villas haut de gamme avec piscine et jardin...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
                         <img src="images/img6.jpg" alt="Actualité 3">
-                        <div class="news-date">5 Février 2025</div>
+                        <div class="news-date">5 Février 2026</div>
                     </div>
                     <div class="news-content">
-                        <h3>Conseils pour investir dans l'immobilier en 2025</h3>
-                        <p>Les experts d'Epitec vous guident dans vos choix d'investissement immobilier cette année. Découvrez les secteurs porteurs et les opportunités à ne pas manquer...</p>
-                        <a href="actualite-conseils-investissement.html" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        <h3>Conseils pour investir dans l'immobilier en 2026</h3>
+                        <p>Les experts d'Epitec vous guident dans vos choix d'investissement immobilier cette année...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
-                        <img src="images/img21.jpg" alt="Actualité 4">
-                        <div class="news-date">28 Janvier 2025</div>
+                        <img src="images/img7.jpeg" alt="Actualité 4">
+                        <div class="news-date">1 Février 2026</div>
                     </div>
                     <div class="news-content">
-                        <h3>Bingerville : le nouveau eldorado immobilier</h3>
-                        <p>La ville nouvelle de Bingerville attire de plus en plus d'investisseurs. Découvrez pourquoi cette localité devient un choix privilégié pour l'immobilier résidentiel...</p>
-                        <a href="actualite-bingerville.html" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        <h3>Baisse des taux d'intérêt : opportunité pour les acheteurs</h3>
+                        <p>La baisse récente des taux d'intérêt crée des conditions favorables pour l'achat immobilier...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
-                        <img src="images/img12.jpg" alt="Actualité 5">
-                        <div class="news-date">20 Janvier 2025</div>
+                        <img src="images/image9.jpeg" alt="Actualité 5">
+                        <div class="news-date">28 Janvier 2026</div>
                     </div>
                     <div class="news-content">
-                        <h3>Les nouvelles réglementations locatives en Côte d'Ivoire</h3>
-                        <p>Point sur les dernières évolutions législatives qui impactent les propriétaires et les locataires. Nos conseils pour rester en conformité...</p>
-                        <a href="actualite-reglementations.html" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        <h3>Epitec obtient la certification qualité service client</h3>
+                        <p>Nouveau label reconnaissant notre engagement pour l'excellence du service immobilier...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 <article class="news-card">
                     <div class="news-image">
-                        <img src="images/img10.jpg" alt="Actualité 6">
-                        <div class="news-date">15 Janvier 2025</div>
+                        <img src="images/img6.jpg" alt="Actualité 6">
+                        <div class="news-date">25 Janvier 2026</div>
                     </div>
                     <div class="news-content">
-                        <h3>Terrains à bâtir : comment faire le bon choix ?</h3>
-                        <p>Notre guide complet pour sélectionner le terrain idéal pour votre projet de construction. Les critères à vérifier avant d'acheter...</p>
-                        <a href="actualite-terrains.html" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        <h3>Lancement de notre nouvelle application mobile</h3>
+                        <p>Découvrez notre application pour rechercher des biens et suivre vos transactions en temps réel...</p>
+                        <a href="#" class="news-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
@@ -118,24 +152,22 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter-section">
+    <section id="investissement">
         <div class="container">
-            <h2>Restez informé</h2>
-            <p>Inscrivez-vous à notre newsletter pour recevoir les dernières actualités immobilières</p>
-            <form class="newsletter-form" action="traitement.php" method="POST">
-                <input type="hidden" name="service" value="newsletter">
-                <input type="email" name="email" placeholder="Votre email" required>
-                <button type="submit" class="btn-primary">S'abonner</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-cta">
-        <div class="container">
-            <h2>Des questions sur nos actualités ?</h2>
-            <p>Contactez-nous pour plus d'informations</p>
-            <a href="index.html#contact" class="btn-primary">Nous contacter</a>
+            <h2>Vous cherchez Ã  investir en CÃ´te d'Ivoire ?</h2>
+            <div class="investissement-content">
+                <div class="investissement-text">
+                    <h3>Abonnez-vous Ã  notre newsletter pour retrouver nos ressources gratuites.</h3>
+                    <p>Que vous soyez professionnel ou particulier, nous avons ce qu'il vous faut.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" class="btn-primary">S'inscrire</button>
+                    </div>
+                </div>
+                <div class="investissement-image">
+                    <img src="images/img7.jpeg" alt="Investissement immobilier">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -144,44 +176,84 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo2.jpeg" alt="Epitec">
-                        <h3>Epitec</h3>
-                    </div>
-                    <p>L'immobilier par excellence</p>
-                    <p><strong>Adresse :</strong><br>Abidjan, Cocody<br>Côte d'Ivoire</p>
+                    <h3 style="color: var(--text-dark);">Epitec Immobilier</h3>
+                    <p style="color: var(--text-dark);">Abidjan, Cocody<br>CÃ´te d'Ivoire</p>
+                    <p style="color: var(--text-dark);">Agence immobiliÃ¨re agrÃ©Ã©e en CÃ´te d'Ivoire</p>
+                    <p style="color: var(--text-dark);">L'immobilier par excellence</p>
+                </div>
+                <div class="footer-section">
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: var(--text-dark);">Suivez-nous</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="acheter.html">Achat</a></li>
-                        <li><a href="louer.html">Location</a></li>
-                        <li><a href="vendre.html">Vente</a></li>
-                        <li><a href="gestion.html">Gestion locative</a></li>
-                        <li><a href="syndic.html">Syndic</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Liens utiles</h4>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="page1.html">Nos biens</a></li>
-                        <li><a href="actualites.html">Actualités</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
+                    <p style="margin-top: 1rem; color: var(--text-dark);">
+                        <a href="#" style="color: var(--text-dark);">Politique de confidentialitÃ©</a><br>
+                        <a href="#" style="color: var(--text-dark);">AccessibilitÃ©</a>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--text-dark);">&copy; 2026 Epitec. Tous droits rÃ©servÃ©s.</p>
+                <p style="color: var(--text-dark);">Epitec Services Immobiliers SpÃ©cialisÃ©s, SociÃ©tÃ© Ã  ResponsabilitÃ© LimitÃ©e</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Ouvrir / fermer menu mobile
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Dropdown au clic sur la flÃ¨che
+        document.querySelectorAll('.arrow').forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const dropdown = this.closest('.dropdown');
+                
+                // Fermer les autres dropdowns
+                document.querySelectorAll('.dropdown').forEach(item => {
+                    if (item !== dropdown) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Dropdown au survol sur desktop
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.add('active');
+                }
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
+
+
+

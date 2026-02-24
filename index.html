@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epitec - L'immobilier par excellence</title>
+    <title>Epitec - Votre partenaire immobilier par excellence</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -19,19 +19,48 @@
                     </a>
                 </div>
                 <nav class="main-nav">
-                    <ul>
-                        <li><a href="acheter.html">ACHETER</a></li>
-                        <li><a href="louer.html">LOUER</a></li>
-                        <li><a href="vendre.html">VENDRE</a></li>
-                        <li><a href="gestion.html">GESTION LOCATIVE</a></li>
-                        <li><a href="syndic.html">SYNDIC</a></li>
-                        <li><a href="actualites.html">ACTUALITÉS</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
+                    <div class="nav-container">
+                        <!-- Hamburger -->
+                        <div class="menu-toggle" id="menu-toggle">
+                            ☰
+                        </div>
+
+                        <!-- Menu -->
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="acheter.html">ACHETER</a></li>
+                            <li class="dropdown">
+                                <a href="location.html">LOUER <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="louer.html">Appartements</a></li>
+                                    <li><a href="maison.html">Maisons et Villas</a></li>
+                                    <li><a href="terrain.html">Terrains</a></li>
+                                    <li><a href="location.html">Tous nos biens</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                            <li><a href="rendezvous.html">PRENDRE RENDEZ-VOUS</a></li>
+                            <li class="dropdown">
+                                <a href="#">RESSOURCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="actualites.html">Actualités</a></li>
+                                    <li><a href="#">Guides immobiliers</a></li>
+                                    <li><a href="#">Conseils d'experts</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">NOS AGENCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Abidjan</a></li>
+                                    <li><a href="#">San Pedro</a></li>
+                                    <li><a href="#">Grand Bassam</a></li>
+                                    <li><a href="#">Toutes les agences</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-                <div class="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </div>
         </div>
     </header>
@@ -41,10 +70,10 @@
         <div class="container">
             <div class="hero-content">
                 <h1>VOTRE BIEN D'EXCEPTION</h1>
-                <p>Epitec, votre partenaire immobilier de confiance</p>
+                <p>Epitec votre partenaire immobilier de confiance.</p>
                 <div class="hero-buttons">
                     <a href="#biens" class="btn-primary">Découvrir nos biens</a>
-                    <a href="#contact" class="btn-secondary">Nous contacter</a>
+                    <a href="#contact" class="btn-secondary">Prendre RDV</a>
                 </div>
             </div>
         </div>
@@ -59,49 +88,25 @@
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3>Je cherche à acheter</h3>
-                    <p>Trouvez la propriété de vos rêves parmi notre sélection exclusive de biens immobiliers.</p>
-                    <a href="acheter.html" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    <h3>Transaction</h3>
+                    <p>Nous vous accompagnons dans vos transactions immobilières, la vente et l'achat.</p>
+                    <a href="acheter.html" class="service-link">Découvrir <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-key"></i>
                     </div>
-                    <h3>Je cherche à louer</h3>
-                    <p>Explorez notre portfolio de locations résidentielles et commerciales de prestige.</p>
-                    <a href="louer.html" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-euro-sign"></i>
-                    </div>
-                    <h3>Je cherche à vendre</h3>
-                    <p>Bénéficiez de notre expertise pour vendre votre bien au meilleur prix.</p>
-                    <a href="vendre.html" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    <h3>Location</h3>
+                    <p>Nous vous proposons des biens à la location, Terrains, Villas, Appartements, Bureaux et Entrepots.</p>
+                    <a href="louer.html" class="service-link">Découvrir <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Gestion locative</h3>
-                    <p>Confiez-nous la gestion complète de votre investissement immobilier.</p>
-                    <a href="gestion.html" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Syndic de co-propriété</h3>
-                    <p>Une gestion professionnelle de votre immeuble en co-propriété.</p>
-                    <a href="syndic.html" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Conseil expertise</h3>
-                    <p>Estimations, conseils et accompagnement pour tous vos projets immobiliers.</p>
-                    <a href="conseil-expertise.html" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                    <p>Nous gérons votre bien immobilier, résidentiel, commercial ou industriel.</p>
+                    <a href="gestion.html" class="service-link">Découvrir <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -161,11 +166,12 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
+            <h2>A PROPOS D'EPITEC</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Epitec, VOTRE PARTENAIRE IMMOBILIER DE CONFIANCE</h2>
-                    <p>Depuis plus de 20 ans, Epitec est l'un des leaders de l'immobilier de prestige en Côte d'Ivoire. Notre expertise reconnue et notre connaissance approfondie du marché local nous permettent de vous offrir un service d'excellence.</p>
-                    <p>Nous accompagnons une clientèle internationale et locale dans leurs projets immobiliers les plus ambitieux, avec un seul objectif : dépasser vos attentes.</p>
+                    <p>EPITEC Immobilier est une agence immobilière agréée créée en 2023 à Abidjan, nous sommes une société de services en immobilier intervenant en Location, Vente, Gestion locative et Conseil.</p>
+                    <p>Notre professionnalisme inspiré des meilleures pratiques internationales accompagne nos clients dans leurs projets immobiliers. Notre société est structurée en départements spécialisées avec des équipes compétentes, expérimentées et dynamiques en Gestion locative, Locations, Syndic et Transactions immobilières.</p>
+                    <p>Acteur incontournable de l'immobilier à Abidjan et en Côte d'Ivoire, nous cultivons les valeurs d'éthique, de rigueur, de réactivité, de qualité et d'excellence professionnelle.</p>
                     <div class="about-stats">
                         <div class="stat">
                             <h3>500+</h3>
@@ -198,8 +204,8 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h3>Téléphone</h3>
-                            <p>(+225) 07 04 69 82 01</p>
-                            <p>(+225) 25 20 00 24 97</p>
+                            <p>(+225) 27 22 57 34 46</p>
+                            <p>(+225) 05 01 40 42 42</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -209,9 +215,9 @@
                             <p>contact@epitec.ci</p>
                             <div style="margin-top: 1rem; color: var(--text-dark);">
                                 <p style="font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">Les rendez-vous pris avec Epitec sont :</p>
-                                <p style="font-size: 0.8rem; margin-bottom: 0.3rem;">✅ Gratuits</p>
-                                <p style="font-size: 0.8rem; margin-bottom: 0.3rem;">✅ Adaptés à vos besoins</p>
-                                <p style="font-size: 0.8rem;">✅ Discrets et confidentiels</p>
+                                <p style="font-size: 0.8rem; margin-bottom: 0.3rem;">• Gratuits</p>
+                                <p style="font-size: 0.8rem; margin-bottom: 0.3rem;">• Adaptés à vos besoins</p>
+                                <p style="font-size: 0.8rem;">• Discrets et confidentiels</p>
                             </div>
                         </div>
                     </div>
@@ -243,6 +249,26 @@
                         </div>
                         <button type="submit" class="btn-primary">Envoyer le message</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="investissement">
+        <div class="container">
+            <h2>Vous cherchez à investir en Côte d'Ivoire ?</h2>
+            <div class="investissement-content">
+                <div class="investissement-text">
+                    <h3>Abonnez-vous à notre newsletter pour retrouver nos ressources gratuites.</h3>
+                    <p>Que vous soyez professionnel ou particulier, nous avons ce qu'il vous faut.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" class="btn-primary">S'inscrire</button>
+                    </div>
+                </div>
+                <div class="investissement-image">
+                    <img src="images/img7.jpeg" alt="Investissement immobilier">
                 </div>
             </div>
         </div>
@@ -298,54 +324,88 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo2.jpeg" alt="Epitec">
-                        <h3>Epitec</h3>
-                    </div>
-                    <p>L'immobilier par excellence</p>
-                    <p><strong>Adresse :</strong><br>Abidjan, Cocody<br>Côte d'Ivoire</p>
+                    <h3 style="color: var(--text-dark);">Epitec Immobilier</h3>
+                    <p style="color: var(--text-dark);">Abidjan, Cocody<br>Côte d'Ivoire</p>
+                    <p style="color: var(--text-dark);">Agence immobilière agréée en Côte d'Ivoire</p>
+                    <p style="color: var(--text-dark);">L'immobilier par excellence</p>
+                </div>
+                <div class="footer-section">
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: var(--text-dark);">Suivez-nous</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="acheter.html">Achat</a></li>
-                        <li><a href="louer.html">Location</a></li>
-                        <li><a href="vendre.html">Vente</a></li>
-                        <li><a href="gestion.html">Gestion locative</a></li>
-                        <li><a href="syndic.html">Syndic</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Liens utiles</h4>
-                    <ul>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#biens">Nos biens</a></li>
-                        <li><a href="#actualites">Actualités</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Newsletter</h4>
-                    <p>Pour tout savoir sur l'évolution de l'immobilier et recevoir nos conseils</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Votre email">
-                        <button type="submit">S'abonner</button>
-                    </form>
+                    <p style="margin-top: 1rem; color: var(--text-dark);">
+                        <a href="#" style="color: var(--text-dark);">Politique de confidentialité</a><br>
+                        <a href="#" style="color: var(--text-dark);">Accessibilité</a>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--text-dark);">&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--text-dark);">Epitec Services Immobiliers Spécialisés, Société à Responsabilité Limitée</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Ouvrir / fermer menu mobile
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Dropdown au clic sur la flèche
+        document.querySelectorAll('.arrow').forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const dropdown = this.closest('.dropdown');
+                
+                // Fermer les autres dropdowns
+                document.querySelectorAll('.dropdown').forEach(item => {
+                    if (item !== dropdown) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Dropdown au survol sur desktop
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.add('active');
+                }
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+

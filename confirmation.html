@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -14,42 +14,118 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="images/logo2.jpeg" alt="Epitec">
+                    <a href="index.html" style="text-decoration: none;">
+                        <img src="images/logo2.jpeg" alt="Epitec">
+                    </a>
                 </div>
                 <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">ACCUEIL</a></li>
-                        <li><a href="acheter.html">ACHETER</a></li>
-                        <li><a href="louer.html">LOUER</a></li>
-                        <li><a href="vendre.html">VENDRE</a></li>
-                        <li><a href="gestion.html">GESTION LOCATIVE</a></li>
-                        <li><a href="syndic.html">SYNDIC</a></li>
-                        <li><a href="actualites.html">ACTUALITÉS</a></li>
-                        <li><a href="index.html#contact">CONTACT</a></li>
-                    </ul>
+                    <div class="nav-container">
+                        <!-- Hamburger -->
+                        <div class="menu-toggle" id="menu-toggle">
+                            ☰
+                        </div>
+
+                        <!-- Menu -->
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="acheter.html">ACHETER</a></li>
+                            <li class="dropdown">
+                                <a href="location.html">LOUER <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="louer.html">Appartements</a></li>
+                                    <li><a href="maison.html">Maisons et Villas</a></li>
+                                    <li><a href="terrain.html">Terrains</a></li>
+                                    <li><a href="location.html">Tous nos biens</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                            <li><a href="rendezvous.html">PRENDRE RENDEZ-VOUS</a></li>
+                            <li class="dropdown">
+                                <a href="#">RESSOURCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="actualites.html">Actualités</a></li>
+                                    <li><a href="#">Guides immobiliers</a></li>
+                                    <li><a href="#">Conseils d'experts</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">NOS AGENCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Abidjan</a></li>
+                                    <li><a href="#">San Pedro</a></li>
+                                    <li><a href="#">Grand Bassam</a></li>
+                                    <li><a href="#">Toutes les agences</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-                <div class="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </div>
         </div>
     </header>
 
-    <!-- Confirmation Section -->
-    <section class="confirmation-section">
+    <!-- Hero Section -->
+    <section id="hero" style="background: linear-gradient(rgba(0, 46, 96, 0.8), rgba(0, 46, 96, 0.8)), url('images/img7.jpeg') center/cover; min-height: 60vh; margin-top: 80px;">
         <div class="container">
-            <div class="confirmation-content">
-                <div class="confirmation-icon">
-                    <i class="fas fa-check-circle"></i>
+            <div class="hero-content">
+                <h1 style="color: var(--white);">Confirmation de Demande</h1>
+                <p style="color: var(--white);">Votre demande a Ã©tÃ© envoyÃ©e avec succÃ¨s</p>
+                <p style="color: var(--white);">Nous vous contacterons dans les plus brefs dÃ©lais</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Section -->
+    <section id="confirmation" style="padding: 5rem 0; background-color: var(--accent-color);">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <div class="service-card" style="background: var(--white); padding: 3rem; border-radius: 10px; box-shadow: var(--shadow-lg);">
+                    <div class="service-icon" style="background: var(--sky-blue); margin-bottom: 2rem;">
+                        <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--white);"></i>
+                    </div>
+                    <h2 style="color: var(--sky-blue); margin-bottom: 1.5rem;">Merci pour votre confiance !</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-dark);">
+                        Votre demande a Ã©tÃ© enregistrÃ©e avec succÃ¨s dans notre systÃ¨me.
+                    </p>
+                    <div style="background: var(--sky-blue); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                        <h4 style="color: var(--white); margin-bottom: 1rem;">NumÃ©ro de dossier :</h4>
+                        <p style="color: var(--white); font-size: 1.5rem; font-weight: bold;">#EP2026-0458</p>
+                    </div>
+                    <div style="text-align: left; margin-bottom: 2rem;">
+                        <h4 style="color: var(--text-dark); margin-bottom: 1rem;">Prochaines Ã©tapes :</h4>
+                        <ul style="color: var(--text-light); line-height: 1.8;">
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-phone" style="color: var(--sky-blue); margin-right: 0.5rem;"></i> Un conseiller Epitec vous contactera sous 24h</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-calendar" style="color: var(--sky-blue); margin-right: 0.5rem;"></i> Prise de rendez-vous pour visite ou estimation</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-file-contract" style="color: var(--sky-blue); margin-right: 0.5rem;"></i> PrÃ©paration des documents nÃ©cessaires</li>
+                            <li style="margin-bottom: 0.5rem;"><i class="fas fa-handshake" style="color: var(--sky-blue); margin-right: 0.5rem;"></i> Finalisation de votre projet immobilier</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f0f8ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--sky-blue);">
+                        <h4 style="color: var(--text-dark); margin-bottom: 0.5rem;">Information importante :</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">
+                            Conservez votre numÃ©ro de dossier et gardez-le Ã  portÃ©e de main pour toute communication future avec Epitec.
+                        </p>
+                    </div>
                 </div>
-                <h1>Message envoyé avec succès !</h1>
-                <p>Merci de nous avoir contactés. Votre message a bien été reçu et nous vous répondrons dans les plus brefs délais.</p>
-                <p>Un conseiller Epitec prendra contact avec vous rapidement pour étudier votre demande.</p>
-                
-                <div class="confirmation-actions">
-                    <a href="index.html" class="btn-primary">Retour à l'accueil</a>
-                    <a href="index.html#contact" class="btn-secondary">Nouveau message</a>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 5rem 0; background-color: var(--sky-blue);">
+        <div class="container">
+            <h2 style="color: var(--white);">QUESTIONS ?</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="color: var(--white); font-size: 1.2rem; margin-bottom: 2rem;">
+                    Notre Ã©quipe est Ã  votre disposition pour toute information complÃ©mentaire.
+                </p>
+                <a href="tel:+2250704698201" class="btn-primary" style="background-color: var(--secondary-color); color: var(--white); padding: 1rem 2rem; text-decoration: none; border-radius: 5px; margin: 0.5rem;">
+                    <i class="fas fa-phone"></i> +225 07 04 69 82 01
+                </a>
+                <a href="mailto:contact@epitec.ci" class="btn-secondary" style="background-color: var(--white); color: var(--sky-blue); padding: 1rem 2rem; text-decoration: none; border-radius: 5px; margin: 0.5rem;">
+                    <i class="fas fa-envelope"></i> contact@epitec.ci
+                </a>
             </div>
         </div>
     </section>
@@ -59,84 +135,84 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/logo2.jpeg" alt="Epitec">
-                        <h3>Epitec</h3>
-                    </div>
-                    <p>L'immobilier par excellence</p>
+                    <h3 style="color: var(--text-dark);">Epitec Immobilier</h3>
+                    <p style="color: var(--text-dark);">Abidjan, Cocody<br>CÃ´te d'Ivoire</p>
+                    <p style="color: var(--text-dark);">Agence immobiliÃ¨re agrÃ©Ã©e en CÃ´te d'Ivoire</p>
+                    <p style="color: var(--text-dark);">L'immobilier par excellence</p>
+                </div>
+                <div class="footer-section">
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: var(--text-dark);">Suivez-nous</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="acheter.html">Achat</a></li>
-                        <li><a href="louer.html">Location</a></li>
-                        <li><a href="vendre.html">Vente</a></li>
-                        <li><a href="gestion.html">Gestion locative</a></li>
-                        <li><a href="syndic.html">Syndic</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Liens utiles</h4>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="page1.html">Nos biens</a></li>
-                        <li><a href="actualites.html">Actualités</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
+                    <p style="margin-top: 1rem; color: var(--text-dark);">
+                        <a href="#" style="color: var(--text-dark);">Politique de confidentialitÃ©</a><br>
+                        <a href="#" style="color: var(--text-dark);">AccessibilitÃ©</a>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--text-dark);">&copy; 2026 Epitec. Tous droits rÃ©servÃ©s.</p>
+                <p style="color: var(--text-dark);">Epitec Services Immobiliers SpÃ©cialisÃ©s, SociÃ©tÃ© Ã  ResponsabilitÃ© LimitÃ©e</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
     
-    <style>
-    .confirmation-section {
-        padding: 8rem 0;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-    }
-    
-    .confirmation-content {
-        text-align: center;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .confirmation-icon {
-        font-size: 4rem;
-        color: #28a745;
-        margin-bottom: 2rem;
-    }
-    
-    .confirmation-content h1 {
-        color: var(--primary-color);
-        margin-bottom: 1.5rem;
-        font-size: 2.5rem;
-    }
-    
-    .confirmation-content p {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-        color: var(--text-dark);
-    }
-    
-    .confirmation-actions {
-        margin-top: 3rem;
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    </style>
+    <!-- JavaScript pour le menu mobile -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Ouvrir / fermer menu mobile
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Dropdown au clic sur la flÃ¨che
+        document.querySelectorAll('.arrow').forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                const dropdown = this.closest('.dropdown');
+                
+                // Fermer les autres dropdowns
+                document.querySelectorAll('.dropdown').forEach(item => {
+                    if (item !== dropdown) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Dropdown au survol sur desktop
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.add('active');
+                }
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
+
+
+
