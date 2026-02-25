@@ -21,9 +21,6 @@
                 <nav class="main-nav">
                     <div class="nav-container">
                         <!-- Hamburger -->
-                        <div class="menu-toggle" id="menu-toggle">
-                            ☰
-                        </div>
 
                         <!-- Menu -->
                         <ul class="nav-menu" id="nav-menu">
@@ -49,15 +46,7 @@
                                     <li><a href="#">Blog</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="#">NOS AGENCES <i class="fas fa-chevron-down arrow"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Abidjan</a></li>
-                                    <li><a href="#">San Pedro</a></li>
-                                    <li><a href="#">Grand Bassam</a></li>
-                                    <li><a href="#">Toutes les agences</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="#contact">NOS CONTACTS</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -135,29 +124,29 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 style="color: var(--text-dark);">Epitec Immobilier</h3>
-                    <p style="color: var(--text-dark);">Abidjan, Cocody<br>CÃ´te d'Ivoire</p>
-                    <p style="color: var(--text-dark);">Agence immobiliÃ¨re agrÃ©Ã©e en CÃ´te d'Ivoire</p>
-                    <p style="color: var(--text-dark);">L'immobilier par excellence</p>
+                    <h3 style="color: var(--white);">Epitec Immobilier</h3>
+                    <p style="color: var(--white);">Abidjan, Cocody<br>Côte d'Ivoire</p>
+                    <p style="color: var(--white);">Agence immobilière agréée en Côte d'Ivoire</p>
+                    <p style="color: var(--white);">L'immobilier par excellence</p>
                 </div>
                 <div class="footer-section">
                 </div>
                 <div class="footer-section">
-                    <h3 style="color: var(--text-dark);">Suivez-nous</h3>
+                    <h3 style="color: var(--white);">Suivez-nous</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
-                    <p style="margin-top: 1rem; color: var(--text-dark);">
-                        <a href="#" style="color: var(--text-dark);">Politique de confidentialitÃ©</a><br>
-                        <a href="#" style="color: var(--text-dark);">AccessibilitÃ©</a>
+                    <p style="margin-top: 1rem; color: var(--white);">
+                        <a href="#" style="color: var(--white);">Politique de confidentialité</a><br>
+                        <a href="#" style="color: var(--white);">Accessibilité</a>
                     </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p style="color: var(--text-dark);">&copy; 2026 Epitec. Tous droits rÃ©servÃ©s.</p>
-                <p style="color: var(--text-dark);">Epitec Services Immobiliers SpÃ©cialisÃ©s, SociÃ©tÃ© Ã  ResponsabilitÃ© LimitÃ©e</p>
+                <p style="color: var(--white);">&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--white);">Epitec Services Immobiliers Spécialisés, Société à Responsabilité Limitée</p>
             </div>
         </div>
     </footer>
@@ -174,6 +163,7 @@
         if (menuToggle && navMenu) {
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
             });
         }
 
@@ -213,6 +203,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 
