@@ -8,10 +8,10 @@
 }
 
 :root {
-    --primary-color: #87CEEB;
+    --primary-color: #003366;
     --secondary-color: #FE0000;
     --accent-color: #f8f9fa;
-    --sky-blue: #87CEEB;
+    --sky-blue: #003366;
     --text-dark: #333;
     --text-light: #777;
     --white: #ffffff;
@@ -228,12 +228,45 @@ header {
     background: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    transition: var(--transition);
+    margin: 4px 0;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 992px) {
     .menu-toggle {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
     }
 
     .nav-menu {
@@ -632,6 +665,7 @@ header {
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
+    color: var(--text-dark);
 }
 
 .form-group input:focus,
@@ -807,7 +841,7 @@ header {
    ================================= */
 footer {
     background: var(--sky-blue);
-    color: var(--text-dark);
+    color: var(--white);
     padding: 3rem 0 1rem;
 }
 
@@ -819,7 +853,7 @@ footer {
 }
 
 .footer-section h4 {
-    color: var(--text-dark);
+    color: var(--white);
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
@@ -848,12 +882,12 @@ footer {
 }
 
 .footer-logo h3 {
-    color: var(--text-dark);
+    color: var(--white);
     margin: 0;
 }
 
 .footer-section p {
-    color: var(--text-dark);
+    color: var(--white);
     margin-bottom: 1.5rem;
 }
 
@@ -866,7 +900,7 @@ footer {
 }
 
 .footer-section ul li a {
-    color: var(--text-dark);
+    color: var(--white);
     transition: var(--transition);
 }
 
@@ -933,7 +967,7 @@ footer {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    color: var(--text-dark);
+    color: var(--white);
 }
 
 /* =================================
@@ -1001,11 +1035,11 @@ footer {
     }
     
     .contact-info {
-        order: 2;
+        order: 1;
     }
     
     .contact-form {
-        order: 1;
+        order: 2;
     }
     
     .footer-content {
