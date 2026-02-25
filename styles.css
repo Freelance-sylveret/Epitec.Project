@@ -225,6 +225,9 @@ header {
     color: var(--text-dark);
     padding: 0.5rem;
     z-index: 1001;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* ===== RESPONSIVE MOBILE ===== */
@@ -998,11 +1001,11 @@ footer {
     }
     
     .contact-info {
-        order: 1;
+        order: 2;
     }
     
     .contact-form {
-        order: 2;
+        order: 1;
     }
     
     .footer-content {
