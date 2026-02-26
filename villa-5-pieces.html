@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa de 5 Pièces - Epitec</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none;">
+                        <img src="images/logo2.jpeg" alt="Epitec">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <div class="nav-container">
+                        <div class="menu-toggle" id="menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="nav-menu" id="nav-menu">
+                            <li><a href="index.html">ACCUEIL</a></li>
+                            <li><a href="acheter.html">ACHETER</a></li>
+                            <li class="dropdown">
+                                <a href="location.html">LOUER <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="louer.html">Appartements</a></li>
+                                    <li><a href="maison.html">Maisons et Villas</a></li>
+                                    <li><a href="terrain.html">Terrains</a></li>
+                                    <li><a href="location.html">Tous nos biens</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gestion.html">GESTION LOCATIVE</a></li>
+                            <li><a href="rendezvous.html">PRENDRE RENDEZ-VOUS</a></li>
+                            <li class="dropdown">
+                                <a href="#">RESSOURCES <i class="fas fa-chevron-down arrow"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="actualites.html">Actualités</a></li>
+                                    <li><a href="#">Guides immobiliers</a></li>
+                                    <li><a href="#">Conseils d'experts</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#contact">NOS CONTACTS</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" style="background: linear-gradient(rgba(0, 46, 96, 0.8), rgba(0, 46, 96, 0.8)), url('images/img24.jpeg') center/cover; min-height: 60vh; margin-top: 80px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 style="color: var(--white);">VILLA DE 5 PIÈCES</h1>
+                <p style="color: var(--white);">Feh Kessé, Abidjan</p>
+                <p style="color: var(--white);">200m² de tout neuf et moderne</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Details -->
+    <section style="padding: 5rem 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Image Gallery -->
+                    <div class="property-gallery">
+                        <div class="main-image">
+                            <img src="images/img24.jpeg" alt="Villa de 5 Pièces - Vue principale" id="mainImage">
+                        </div>
+                        <div class="thumbnail-grid">
+                            <img src="images/img24.jpeg" alt="Vue 1" onclick="changeImage('images/img24.jpeg')" class="thumbnail active">
+                            <img src="images/img25.jpeg" alt="Vue 2" onclick="changeImage('images/img25.jpeg')" class="thumbnail">
+                            <img src="images/img26.jpeg" alt="Vue 3" onclick="changeImage('images/img26.jpeg')" class="thumbnail">
+                            <img src="images/img29.jpeg" alt="Vue 4" onclick="changeImage('images/img29.jpeg')" class="thumbnail">
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="property-description">
+                        <h2>Description du bien</h2>
+                        <p>Villa de 5 pièces de toute nouvelle constitution située à Feh Kessé, à l'entrée de la cité immobilière et non loin du Boulevard Mitterrand. Cette résidence moderne offre 200m² de surface habitable avec des prestations de qualité et un aménagement optimisé.</p>
+                        
+                        <h3>Caractéristiques principales</h3>
+                        <ul>
+                            <li><strong>Surface :</strong> 200m²</li>
+                            <li><strong>Pièces :</strong> 5 pièces</li>
+                            <li><strong>Chambres :</strong> Toutes autonomes</li>
+                            <li><strong>Construction :</strong> Toute neuve</li>
+                            <li><strong>Accès :</strong> Bitumée jusqu'à la maison</li>
+                            <li><strong>Localisation :</strong> Entrée de la cité immobilière</li>
+                        </ul>
+
+                        <h3>Documents disponibles</h3>
+                        <ul>
+                            <li>ACD Global</li>
+                            <li>Terrain bitumé jusqu'à la maison</li>
+                        </ul>
+
+                        <h3>Points forts</h3>
+                        <ul>
+                            <li>Villa de toute nouvelle constitution</li>
+                            <li>Située à Feh Kessé, quartier prisé</li>
+                            <li>À l'entrée de la cité immobilière</li>
+                            <li>Proche du Boulevard Mitterrand</li>
+                            <li>Toutes les chambres sont autonomes</li>
+                            <li>Accès bitumé jusqu'à la maison</li>
+                            <li>Documents administratifs complets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Price Card -->
+                    <div class="price-card">
+                        <div class="price-header">
+                            <h3>À VENDRE</h3>
+                            <div class="price">95 000 000 FCFA</div>
+                            <p style="color: var(--text-dark); font-size: 0.9rem; margin-top: 0.5rem;">Négociable légèrement (KAO 90)</p>
+                        </div>
+                        <div class="price-details">
+                            <p><strong>Surface :</strong> 200m²</p>
+                            <p><strong>Commission :</strong> 5%</p>
+                            <p><strong>Documents :</strong> ACD Global</p>
+                            <p><strong>Disponibilité :</strong> Immédiate</p>
+                        </div>
+                        <button class="btn-primary" onclick="scrollToContact()">Contacter l'agence</button>
+                    </div>
+
+                    <!-- Property Info -->
+                    <div class="property-info">
+                        <h4>Informations générales</h4>
+                        <ul>
+                            <li><i class="fas fa-home"></i> Villa</li>
+                            <li><i class="fas fa-bed"></i> 5 pièces</li>
+                            <li><i class="fas fa-ruler-combined"></i> 200m²</li>
+                            <li><i class="fas fa-star"></i> Toute neuve</li>
+                            <li><i class="fas fa-road"></i> Accès bitumé</li>
+                            <li><i class="fas fa-file-contract"></i> ACD Global</li>
+                        </ul>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="location-info">
+                        <h4>Localisation</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Feh Kessé, Abidjan</p>
+                        <p>À l'entrée de la cité immobilière, non loin du Boulevard Mitterrand. Quartier résidentiel prisé avec accès bitumé jusqu'à la maison.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 5rem 0; background-color: var(--sky-blue);">
+        <div class="container">
+            <h2 style="color: var(--white); text-align: center; margin-bottom: 3rem;">CONTACTEZ-NOUS</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>(+225) 27 22 57 34 46</p>
+                            <p>(+225) 07 04 69 82 01</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@epitech-immobilier.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Demande d'information</h3>
+                    <form action="./traitement.php" method="POST">
+                        <input type="hidden" name="bien" value="Villa 5 Pièces - Feh Kessé">
+                        <div class="form-group">
+                            <input type="text" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 style="color: var(--white);">Epitec Immobilier</h3>
+                    <p style="color: var(--white);">Abidjan, Cocody<br>Côte d'Ivoire</p>
+                    <p style="color: var(--white);">Agence immobilière agréée en Côte d'Ivoire</p>
+                    <p style="color: var(--white);">L'immobilier par excellence</p>
+                </div>
+                <div class="footer-section">
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: var(--white);">Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="color: var(--white);">&copy; 2026 Epitec. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <script>
+    // Image gallery functionality
+    function changeImage(src) {
+        document.getElementById('mainImage').src = src;
+        
+        // Update active thumbnail
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.classList.remove('active');
+            if (thumb.src.includes(src.split('/').pop())) {
+                thumb.classList.add('active');
+            }
+        });
+    }
+
+    // Scroll to contact
+    function scrollToContact() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Mobile menu
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        }
+    });
+    </script>
+
+    <style>
+    .property-gallery {
+        margin-bottom: 3rem;
+    }
+    
+    .main-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    
+    .thumbnail-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+    
+    .thumbnail {
+        width: 100%;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+    
+    .thumbnail:hover,
+    .thumbnail.active {
+        opacity: 1;
+        border: 2px solid var(--primary-color);
+    }
+    
+    .price-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+    
+    .price-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .price {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+    
+    .property-info {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+    
+    .property-info ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .property-info li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .property-info li i {
+        width: 20px;
+        color: var(--primary-color);
+    }
+    
+    .location-info {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .property-description h2,
+    .property-description h3 {
+        color: var(--primary-color);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .property-description ul {
+        margin-bottom: 2rem;
+    }
+    
+    .property-description li {
+        margin-bottom: 0.5rem;
+    }
+    </style>
+</body>
+</html>
