@@ -163,7 +163,7 @@
                         <div>
                             <h3>Téléphone</h3>
                             <div class="phone-numbers">
-                                <p style="color: white;">(+225) 27 22 57 34 46</p>
+                                <p style="color: white;">(+225) 27 22 57 94 46</p>
                                 <p style="color: white;">(+225) 07 04 69 82 01</p>
                             </div>
                         </div>
@@ -219,46 +219,88 @@
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
+  <p style="margin-top: 1rem; color: var(--white);">
+                        <a href="#" style="color: var(--white);">Politique de confidentialité</a><br>
+                        <a href="#" style="color: var(--white);">Accessibilité</a>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p style="color: var(--white);">&copy; 2026 Epitec. Tous droits réservés.</p>
+                <p style="color: var(--white);">Epitec Services Immobiliers Spécialisés, Société à Responsabilité Limitée</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
     
+    <!-- JavaScript pour le menu mobile -->
     <script>
-    // Image gallery functionality
-    function changeImage(src) {
-        document.getElementById('mainImage').src = src;
-        
-        // Update active thumbnail
-        document.querySelectorAll('.thumbnail').forEach(thumb => {
-            thumb.classList.remove('active');
-            if (thumb.src.includes(src.split('/').pop())) {
-                thumb.classList.add('active');
-            }
-        });
-    }
-
-    // Scroll to contact
-    function scrollToContact() {
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Mobile menu
     document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
+        // Ouvrir / fermer menu mobile
         if (menuToggle && navMenu) {
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
                 menuToggle.classList.toggle('active');
             });
         }
+
+        // Dropdown au clic sur la flèche
+        document.querySelectorAll('.arrow').forEach(arrow => {
+            arrow.addEventListener('click', function(e) {
+                e.preventDefault(); // Empêche la navigation du lien parent
+                e.stopPropagation();
+                
+                const dropdown = this.closest('.dropdown');
+                
+                // Fermer les autres dropdowns
+                document.querySelectorAll('.dropdown').forEach(item => {
+                    if (item !== dropdown) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Empêcher la navigation sur mobile quand on clique sur le lien parent d'un dropdown
+        document.querySelectorAll('.dropdown > a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault(); // Empêche la navigation sur mobile
+                    
+                    const dropdown = this.closest('.dropdown');
+                    
+                    // Fermer les autres dropdowns
+                    document.querySelectorAll('.dropdown').forEach(item => {
+                        if (item !== dropdown) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Dropdown au survol sur desktop
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseenter', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.add('active');
+                }
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 768) {
+                    this.classList.remove('active');
+                }
+            });
+        });
     });
     </script>
 
