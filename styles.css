@@ -304,7 +304,7 @@ header {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
         font-weight: 600;
-        color: var(--primary-color);
+        color: orange;
         white-space: normal;
         overflow: visible;
         line-height: 1.4;
@@ -1123,6 +1123,7 @@ footer {
     .nav-menu a {
         font-size: 0.85rem !important;
         padding: 0.7rem 1rem !important;
+        color: orange !important;
         white-space: normal !important;
         overflow: visible !important;
         line-height: 1.4 !important;
