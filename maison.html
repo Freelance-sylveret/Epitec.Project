@@ -187,7 +187,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h3 style="color: var(--white);">Téléphone</h3>
-                            <p style="color: var(--white);">(+225) 27 22 57 34 46</p>
+                            <p style="color: var(--white);">(+225) 27 22 57 94 46</p>
                             <p style="color: var(--white);">(+225) 05 01 40 42 42</p>
                         </div>
                     </div>
@@ -286,9 +286,10 @@
             });
         }
 
-        // Dropdown au clic sur la flÃ¨che
+        // Dropdown au clic sur la flèche
         document.querySelectorAll('.arrow').forEach(arrow => {
             arrow.addEventListener('click', function(e) {
+                e.preventDefault(); // Empêche la navigation du lien parent
                 e.stopPropagation();
                 
                 const dropdown = this.closest('.dropdown');
@@ -301,6 +302,26 @@
                 });
                 
                 dropdown.classList.toggle('active');
+            });
+        });
+
+        // Empêcher la navigation sur mobile quand on clique sur le lien parent d'un dropdown
+        document.querySelectorAll('.dropdown > a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault(); // Empêche la navigation sur mobile
+                    
+                    const dropdown = this.closest('.dropdown');
+                    
+                    // Fermer les autres dropdowns
+                    document.querySelectorAll('.dropdown').forEach(item => {
+                        if (item !== dropdown) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    dropdown.classList.toggle('active');
+                }
             });
         });
 

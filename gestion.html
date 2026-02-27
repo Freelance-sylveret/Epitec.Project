@@ -138,29 +138,78 @@
     <!-- Avantages Section -->
     <section id="avantages" style="padding: 5rem 0;">
         <div class="container">
-            <h2>POURQUOI CHOISIR Epitec ?</h2>
+            <h2>POURQUOI NOUS CHOISIR ?</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-trophy"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <h3>Expertise 20+ ans</h3>
-                    <p>Plus de 20 ans d'expérience dans la gestion immobilière en Côte d'Ivoire.</p>
+                    <h3>Professionnalisme</h3>
+                    <p>Expertise et compétence dans tous nos services immobiliers.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <h3>Équipe Dédiée</h3>
-                    <p>Des gestionnaires immobiliers professionnels à votre écoute.</p>
+                    <h3>Transparence</h3>
+                    <p>Communication claire et honnête dans toutes nos transactions.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <h3>Suivi Digital</h3>
-                    <p>Plateforme en ligne pour suivre vos biens et vos revenus en temps réel.</p>
+                    <h3>Disponibilité</h3>
+                    <p>Réactivité et présence pour répondre à tous vos besoins.</p>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Accompagnement personnalisé</h3>
+                    <p>Service sur mesure adapté à votre situation unique.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Gestion sécurisée</h3>
+                    <p>Protection et sécurité optimales pour vos biens immobiliers.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin: 3rem 0;">
+                <p style="font-size: 1.2rem; color: var(--primary-color); font-weight: 600;">Avec EPITEC, votre patrimoine est entre de bonnes mains.</p>
+            </div>
+
+            <div style="text-align: center; margin: 3rem 0; color: var(--primary-color); font-size: 2rem;">⸻</div>
+
+            <h2 style="text-align: center; margin-bottom: 3rem;">NOTRE ENGAGEMENT</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Gestion sérieuse</h3>
+                    <p>Nous gérons vos biens avec le plus grand sérieux et professionnalisme.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Rentabilité optimisée</h3>
+                    <p>Nous maximisons le rendement de vos investissements immobiliers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Relation de confiance</h3>
+                    <p>Nous maintenons une relation basée sur la confiance et la transparence.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.2rem; color: var(--primary-color); font-weight: 600;">Votre satisfaction est notre priorité.</p>
             </div>
         </div>
     </section>
@@ -174,9 +223,9 @@
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <h3>T?l?phone</h3>
-                            <p style="color: var(--white);">(+225) 27 22 57 34 46</p>
+                            <h3>Téléphone</h3>
                             <p style="color: var(--white);">(+225) 05 01 40 42 42</p>
+                            <p style="color: var(--white);">(+225) 27 22 57 94 46</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -202,7 +251,7 @@
                             <input type="email" name="email" placeholder="Votre email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="telephone" placeholder="Votre t?l?phone">
+                            <input type="tel" name="telephone" placeholder="Votre téléphone">
                         </div>
                         <div class="form-group">
                             <select name="service" required>
@@ -277,6 +326,7 @@
         // Dropdown au clic sur la flèche
         document.querySelectorAll('.arrow').forEach(arrow => {
             arrow.addEventListener('click', function(e) {
+                e.preventDefault(); // Empêche la navigation du lien parent
                 e.stopPropagation();
                 
                 const dropdown = this.closest('.dropdown');
@@ -289,6 +339,26 @@
                 });
                 
                 dropdown.classList.toggle('active');
+            });
+        });
+
+        // Empêcher la navigation sur mobile quand on clique sur le lien parent d'un dropdown
+        document.querySelectorAll('.dropdown > a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault(); // Empêche la navigation sur mobile
+                    
+                    const dropdown = this.closest('.dropdown');
+                    
+                    // Fermer les autres dropdowns
+                    document.querySelectorAll('.dropdown').forEach(item => {
+                        if (item !== dropdown) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    dropdown.classList.toggle('active');
+                }
             });
         });
 
