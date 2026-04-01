@@ -214,10 +214,9 @@
                 <div class="footer-section">
                     <h3 style="color: var(--white);">Suivez-nous</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/share/14WfNCNyAYB/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/2250703204242"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@epitecimmobilier?_r=1&_t=ZS-94ytNYDRuXo"><i class="fab fa-tiktok"></i></a>
                     </div>
   <p style="margin-top: 1rem; color: var(--white);">
                         <a href="#" style="color: var(--white);">Politique de confidentialité</a><br>
@@ -302,6 +301,23 @@
             });
         });
     });
+
+    // Fonction pour changer l'image principale
+    function changeImage(src) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = src;
+        
+        // Mettre à jour la classe active
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
+
+    // Fonction pour scroller vers la section contact
+    function scrollToContact() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
     </script>
 
     <style>
@@ -399,8 +415,16 @@
         margin-bottom: 2rem;
     }
     
-    .property-description li {
-        margin-bottom: 0.5rem;
+    .row {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .row {
+            grid-template-columns: 1fr;
+        }
     }
     </style>
 </body>
